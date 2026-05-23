@@ -1,0 +1,50 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: asm-redis
+    ports:
+      - "192.168.1.21:6379:6379"
+    volumes:
+      - redis_data:/data
+      - ./configs/redis.conf:/usr/local/etc/redis/redis.conf:ro
+    command: redis-server /usr/local/etc/redis/redis.conf
+    restart: unless-stopped
+    sysctls:
+      - net.core.somaxconn=65535
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:24.3
+    container_name: asm-clickhouse
+    ports:
+      - "192.168.1.21:8123:8123"
+      - "192.168.1.21:9000:9000"
+    environment:
+      CLICKHOUSE_DB: asm_pipeline
+      CLICKHOUSE_USER: asm_ingestor
+      CLICKHOUSE_PASSWORD: changeme
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+    restart: unless-stopped
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+  consumer:
+    build:
+      context: .
+      dockerfile: Dockerfile.consumer
+    container_name: asm-consumer
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - clickhouse
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  clickhouse_data:

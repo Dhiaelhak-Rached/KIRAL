@@ -1,0 +1,5091 @@
+Domain Export: lapp.com
+Generated at:  2026-05-23 02:37:50
+Total rows:    224
+============================================================
+
+--- Row 1 ---
+event_id:            f46b565b-0cc0-4490-a497-cbb4fca271f7
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               176.9.15.249:8080
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:32:51.896
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "176.9.15.249",
+  "port": 8080,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 2 ---
+event_id:            60c54485-6e7f-4a70-96f8-4b45eb43669a
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               2.21.2.171:80
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:32:44.283
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "2.21.2.171",
+  "port": 80,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 3 ---
+event_id:            3ff9da15-935d-4686-8ed0-f7047492a5cd
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               23.215.5.224:443
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:33:17.616
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "23.215.5.224",
+  "port": 443,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 4 ---
+event_id:            0a60ac5b-4f32-4be1-9c24-0d3b8dfbc12f
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               5.9.113.109:443
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:32:36.250
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "5.9.113.109",
+  "port": 443,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 5 ---
+event_id:            c031338c-e440-46fb-9b2e-726f2687a860
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               85.125.90.37:443
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:32:57.994
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "85.125.90.37",
+  "port": 443,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 6 ---
+event_id:            d92cc2a2-5f30-4965-a858-5852478f9c67
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               88.99.148.61:443
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:33:07.143
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "88.99.148.61",
+  "port": 443,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 7 ---
+event_id:            8816a778-0916-4bca-b1e2-7268a8326f5a
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               95.101.35.234:80
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:32:44.283
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "95.101.35.234",
+  "port": 80,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 8 ---
+event_id:            57794235-8bae-4cb4-ac1e-ed9376da3258
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               95.216.249.130:80
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:32:36.250
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "95.216.249.130",
+  "port": 80,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 9 ---
+event_id:            3672693a-cb27-4024-a9c4-65eff62086af
+event_type:          PORT_FOUND
+target:              lapp.com
+asset:               95.216.249.134:443
+source_tool:         naabu
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:34.474
+ingested_at:         2026-05-23 00:33:23.496
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "ip": "95.216.249.134",
+  "port": 443,
+  "protocol": "tcp",
+  "scan_type": "connect"
+}
+
+--- Row 10 ---
+event_id:            0d190bb6-4ac2-41b1-adfc-83b3d375c4d4
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               a.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "a.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 11 ---
+event_id:            5461cfbf-4c79-43da-a564-39b2859fd5f5
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               api-shop.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "api-shop.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2001:41a8:47:301::215:2aa",
+    "2001:41a8:47:301::5f65:23e9"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.0.0.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 12 ---
+event_id:            19de4c81-5c96-4292-8a28-a60534125ad9
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               api-shop.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "api-shop.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "api-shop.lapp.com.edgekey.net",
+    "e293841.dscb.akamaiedge.net"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.0.0.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 13 ---
+event_id:            8016a9c8-0a13-4c31-b65d-e0fca37e225b
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               api-shop.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "api-shop.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "2.21.2.170",
+    "95.101.35.233"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.0.0.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 14 ---
+event_id:            8b1211da-b89f-4300-9196-deaac4f8a42f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               api-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "api-uat.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "api-uat.lapp.com.edgekey.net",
+    "e373988.dscb.akamaiedge.net"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "8.8.8.8:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 15 ---
+event_id:            fa54a47f-a433-44f6-afa3-7cbe990545f5
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               api-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "api-uat.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "2.23.84.42",
+    "2.23.84.27"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "8.8.8.8:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 16 ---
+event_id:            6f1ea31f-4bb6-42aa-8cb1-8ac42e396e91
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               api-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "api-uat.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2001:41a8:47:301::215:292",
+    "2001:41a8:47:301::215:2c0"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "8.8.8.8:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 17 ---
+event_id:            72f6d55b-486c-485d-aa0c-9cff650e4d37
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               app.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "app.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "8.8.8.8:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 18 ---
+event_id:            079350af-4b29-4330-8f8c-d2b52cedce60
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               authsec.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "authsec.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.224"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "8.8.4.4:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 19 ---
+event_id:            9f32572e-bf05-457c-abc3-aa25b05efd73
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               azure.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "azure.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 20 ---
+event_id:            3123adc8-57c7-44e5-807d-d37b16e89c5f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               cdn.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "cdn.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 21 ---
+event_id:            cb978ed5-7637-4753-9bf1-6c84ddcd3162
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               chainconfigurator.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "chainconfigurator.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "185.70.117.99"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "208.67.222.222:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 22 ---
+event_id:            8e51f7ad-60d5-4020-912b-79d7ab3fd559
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               changefit.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "changefit.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 23 ---
+event_id:            82be96b5-44f7-4c1b-a6db-49410d309f17
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               configurator-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "configurator-test.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "57.153.116.85"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 24 ---
+event_id:            26da77b9-affb-4266-9669-7adbba0e4e39
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               configurator-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "configurator-test.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp.eu.encoway.cloud"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 25 ---
+event_id:            2dde02e3-590a-47eb-a362-c69fdae3e8b1
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               configurator.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "configurator.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "57.153.116.85"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.1.1.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 26 ---
+event_id:            a8b4493c-35c2-4efb-acf1-fd483a7b3139
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               configurator.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "configurator.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp.eu.encoway.cloud"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.1.1.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 27 ---
+event_id:            ccf2ddf2-b89d-40f4-bff3-cce7cb6152db
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               dam-media.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "dam-media.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.224"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 28 ---
+event_id:            3e0b603c-8dfd-4e51-ad40-472852fc2792
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               demo.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "demo.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 29 ---
+event_id:            ba71efc9-e488-479e-8e4b-92fa4fe76a4b
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               dev-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "dev-login.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "104.18.34.171",
+    "172.64.153.85"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "208.67.220.220:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 30 ---
+event_id:            6b881adb-27c1-4a59-ae32-fc77c2833847
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               dev-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "dev-login.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a06:98c1:3102::6812:22ab",
+    "2a06:98c1:3101::ac40:9955"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "208.67.220.220:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 31 ---
+event_id:            5f144116-29d7-47ea-82e6-7be9ab16785d
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               dev-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "dev-login.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "dev-lappgroup-cd-d7vfxyx7gzujqznh.edge.tenants.eu.auth0.com",
+    "pvsty8.eu.auth0.com.pivot.prod.auth0edge.com",
+    "auth0-ingress.eu.auth0.com.cdn.cloudflare.net"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "208.67.220.220:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 32 ---
+event_id:            f8721a60-a35b-4f7c-b633-ded5088c561b
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               dev-useradmin-ciam.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "dev-useradmin-ciam.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.199"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "208.67.220.220:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 33 ---
+event_id:            aa1864e6-de0f-4206-aa91-d056ac305296
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "e.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "151.101.193.124",
+    "151.101.1.124",
+    "151.101.65.124",
+    "151.101.129.124"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "8.8.4.4:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 34 ---
+event_id:            2f003250-6af0-4eaa-ba00-947510c00ff0
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "e.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a04:4e42:200::380",
+    "2a04:4e42:400::380",
+    "2a04:4e42:600::380",
+    "2a04:4e42::380"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "8.8.4.4:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 35 ---
+event_id:            012b818b-e6e7-4c69-8a6c-18d24edfa82f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "e.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "prod.magentocloud.map.fastly.net"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "8.8.4.4:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 36 ---
+event_id:            167ba09f-d003-46c0-bf63-7cb41c4672e0
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               ekanban-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "ekanban-test.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "5.9.113.109"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 37 ---
+event_id:            a60f8747-aaf9-4352-b03b-46e4ff71ef1c
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               ekanban-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "ekanban-test.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-ekanban-test.motius.com"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 38 ---
+event_id:            4c3a4bd5-7c6a-4217-b7a5-6b222c313668
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               ekanban.csc.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "ekanban.csc.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "176.9.15.249"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 39 ---
+event_id:            3852da05-69e5-4083-9e21-1bebb7dee442
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               ekanban.csc.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "ekanban.csc.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-cost-calc-light.apps.dokploy-1.motius.ci"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 40 ---
+event_id:            50ba0625-65bd-4ee8-a966-a4eb6ce97073
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               ekanban.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "ekanban.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-ekanban.motius.com"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "208.67.222.222:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 41 ---
+event_id:            035890c5-6259-4510-aa39-f828e43a3f38
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               ekanban.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "ekanban.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "5.9.113.109"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "208.67.222.222:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 42 ---
+event_id:            fc9ad677-f815-4f76-a8c8-70ecb0a59469
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               est-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "est-login.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 43 ---
+event_id:            0a2a7e9a-3f58-4723-95d7-f1fbb8f57bb4
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               events.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "events.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "213.132.11.80"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 44 ---
+event_id:            d3c02b7f-671a-48d1-aad7-abe412171e18
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               fo-configurator.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "fo-configurator.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.224"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "8.8.4.4:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 45 ---
+event_id:            fac53934-f600-4ca2-b277-4bc21616681a
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               gamification.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "gamification.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "gamification.ariticapp.com"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 46 ---
+event_id:            8a38267a-5504-4d99-8228-d483033dfd01
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               gamification.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "gamification.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.216.249.134"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 47 ---
+event_id:            08e68dc9-667f-4490-af95-544d40a2dcb8
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               gcp.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "gcp.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 48 ---
+event_id:            730cff52-aeb3-43c3-9eef-b48c6c5e3085
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               git.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "git.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "149.112.112.112:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 49 ---
+event_id:            36467956-4cbe-4597-88fa-8e6274cde6be
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               gitlab.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "gitlab.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "208.67.220.220:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 50 ---
+event_id:            40e74bad-38a1-4917-b158-e2d8e9b5e1eb
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               imager-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "imager-test.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "51.195.87.235"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 51 ---
+event_id:            e26e4aae-379e-4564-89c1-a9d127b46dc8
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               imager-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "imager-test.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-daml-test.k.damu.rocks"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 52 ---
+event_id:            ea6f9d35-0315-4588-ab8f-6aad9dfbc6e7
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               imager.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "imager.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "51.195.87.235"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 53 ---
+event_id:            13fc007f-8952-4549-8e09-d0603e85f4c2
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               imager.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "imager.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-daml.k.damu.rocks"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 54 ---
+event_id:            919b7a68-f4ca-49e8-8c9e-11d5ba437765
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               img.newsman.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "img.newsman.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "46.4.33.148",
+    "88.99.148.61"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "8.8.8.8:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 55 ---
+event_id:            777a1deb-7c09-4545-8e3d-a8bd101f3fd9
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               img.newsman.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "img.newsman.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "img.nzm2.eu",
+    "img.newsman.app"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "8.8.8.8:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 56 ---
+event_id:            1fe4f096-d1ee-42e2-bfbf-d9d40aef087f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               inx-at.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "inx-at.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "93.191.162.150"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 57 ---
+event_id:            ac8d20e3-d7ca-4592-b09c-c1ad01d0890c
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               inx-de.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "inx-de.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "93.191.162.150"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 58 ---
+event_id:            ca61a758-fc0b-4f6a-91f3-94535008f486
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               inx-fr.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "inx-fr.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "93.191.162.150"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.0.0.1:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 59 ---
+event_id:            288d6132-6641-4f75-b8b3-449df185cc45
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               inx-nl.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "inx-nl.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "93.191.162.150"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "1.1.1.1:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 60 ---
+event_id:            f3a1a51e-46ed-4669-ba86-0626069c40fe
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               kariera.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "kariera.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "46.28.106.159"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 61 ---
+event_id:            fb28c438-a8ee-4c70-9524-0eb99ea40037
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappasia.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappasia.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.216.249.130"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "8.8.8.8:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 62 ---
+event_id:            b7942460-b983-47a4-b994-49358c158393
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappasia.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappasia.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "asia-lappgroup.ariticapp.com"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "8.8.8.8:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 63 ---
+event_id:            9f37a633-03b6-400b-9a5a-6050e893643f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappcn.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappcn.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.216.249.130"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "1.0.0.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 64 ---
+event_id:            efb16845-a830-4dfc-ad1a-c2d250966742
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappcn.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappcn.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "china-lappgroup.ariticapp.com"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "1.0.0.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 65 ---
+event_id:            71afa388-062b-461a-a393-9f18b9102697
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappekanban.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappekanban.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "85.125.90.37"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 66 ---
+event_id:            ef11f2be-e41a-4811-9ec7-8fd6ce74b100
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappgo.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappgo.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "20.113.162.111"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.1.1.1:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 67 ---
+event_id:            505c84ce-03df-4cd9-a1e5-d5383d309be9
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappgo.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappgo.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "base.flip-app.com"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.1.1.1:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 68 ---
+event_id:            3ce9a5ea-f50e-409c-931d-d6db2228904f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappin.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappin.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.216.249.130"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 69 ---
+event_id:            55c91254-1212-43bf-8a6b-42266c985d82
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappin.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappin.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "india-lappgroup.ariticapp.com"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 70 ---
+event_id:            a3a3ca03-ef6a-472e-9bbc-2bf78d6dd2d1
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappjp.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappjp.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "japan-lappgroup.ariticapp.com"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 71 ---
+event_id:            990763ce-8177-4f55-94fe-3fdef35c07e1
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappjp.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappjp.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.216.249.130"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 72 ---
+event_id:            952757dd-7fc1-43fd-8577-de73f4174d43
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappkr.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappkr.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "korea-lappgroup.ariticapp.com"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "9.9.9.9:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 73 ---
+event_id:            25b9de3c-41de-460a-bc3b-354393688c89
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lappkr.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lappkr.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.216.249.130"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "9.9.9.9:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 74 ---
+event_id:            7305a682-d5af-4773-a7ae-8a24ad62d23f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lat-zeus.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lat-zeus.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "91.118.110.101"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "208.67.222.222:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 75 ---
+event_id:            44a00b59-62b4-433c-a4f7-233ce8f1fe00
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               latam.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "latam.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-latam.myshopify.com",
+    "shops.myshopify.com"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 76 ---
+event_id:            a863ca63-1139-4cde-b2b5-00b2035b479f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               latam.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "latam.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2620:127:f00f:e::"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 77 ---
+event_id:            79ffa80c-c177-4be1-ba0d-84dc5b2abd3b
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               latam.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "latam.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "23.227.38.74"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 78 ---
+event_id:            ad0ff57d-18da-4f34-a181-cebfe9a0e695
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lgw-guest.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lgw-guest.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "192.168.255.254"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.1.1.1:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 79 ---
+event_id:            3ad03985-58e4-4745-8786-a87233359253
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               live.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "live.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 80 ---
+event_id:            a6af3b65-98b9-4d6c-9b62-a8475ebdd349
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               lnl-3cx.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "lnl-3cx.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "212.61.76.119"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 81 ---
+event_id:            99f9e365-b143-4a26-ab18-896194ed5669
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "login.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "172.64.153.85",
+    "104.18.34.171"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 82 ---
+event_id:            1195fd37-ac38-4882-ac41-4438550f29c5
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "login.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a06:98c1:3102::6812:22ab",
+    "2a06:98c1:3101::ac40:9955"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 83 ---
+event_id:            e1a8054e-d215-40d3-bd1c-d72ddb24793b
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "login.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lappgroup-cd-diryxpy2qqv5ebtx.edge.tenants.eu.auth0.com",
+    "pvsty8.eu.auth0.com.pivot.prod.auth0edge.com",
+    "auth0-ingress.eu.auth0.com.cdn.cloudflare.net"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 84 ---
+event_id:            7dbacb9f-4654-42d7-a64b-12d228dc38ef
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mbgtest-sg.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mbgtest-sg.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "13.232.45.145"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 85 ---
+event_id:            4649ad2c-a16e-4654-995c-f051bbe47a08
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mbgtestapi-sg.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mbgtestapi-sg.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "13.232.45.145"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "1.0.0.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 86 ---
+event_id:            0af06eab-609e-4dfe-916f-aa55492e3b78
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mcstaging-e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mcstaging-e.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "151.101.193.124",
+    "151.101.1.124",
+    "151.101.65.124",
+    "151.101.129.124"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 87 ---
+event_id:            b4b78a68-2e19-4057-9e47-77c722a5e4b3
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mcstaging-e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mcstaging-e.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "prod.magentocloud.map.fastly.net"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 88 ---
+event_id:            f60bb308-295a-411b-bd9d-13000ff693aa
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mcstaging-e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mcstaging-e.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a04:4e42::380",
+    "2a04:4e42:200::380",
+    "2a04:4e42:400::380",
+    "2a04:4e42:600::380"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 89 ---
+event_id:            db31f76b-dee0-45c2-8076-f9a05a4b0a40
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool-api.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool-api.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "51.195.87.235"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 90 ---
+event_id:            fc87f4be-d694-4a54-a7f3-82121ef9f3b4
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool-api.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool-api.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-da-api.k.damu.rocks"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 91 ---
+event_id:            9f138ed1-93ec-4030-b23a-81874dafc144
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool-test-api.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool-test-api.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "51.195.87.235"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "149.112.112.112:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 92 ---
+event_id:            8278dc65-17f1-4252-92a2-eb8e9c671a69
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool-test-api.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool-test-api.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-da-api-test.k.damu.rocks"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "149.112.112.112:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 93 ---
+event_id:            4abbb861-d2fa-4e62-b256-6763da2536c1
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool-test.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-da-test.k.damu.rocks"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "149.112.112.112:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 94 ---
+event_id:            c1fc1c93-fae6-48fd-a448-874ae36c79c1
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool-test.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool-test.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "51.195.87.235"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "149.112.112.112:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 95 ---
+event_id:            2adce563-04d3-479e-b499-f0435cf5554f
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "51.195.87.235"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "208.67.220.220:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 96 ---
+event_id:            e364e054-9e53-4b42-8615-946b5e3e0288
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               mediapool.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "mediapool.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-da.k.damu.rocks"
+  ],
+  "resolver_used": [
+    "208.67.222.222:53",
+    "208.67.220.220:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 97 ---
+event_id:            4f6897c2-352e-4df4-b765-beef66c4cb47
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               myrex.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "myrex.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.194"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 98 ---
+event_id:            e497c5de-8099-45d5-9f4b-06be075c3574
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               nl.newsman.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "nl.newsman.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "148.251.84.51"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 99 ---
+event_id:            7fada079-5abf-4904-9fc4-c1293413f67b
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               nl.newsman.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "nl.newsman.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "nl.nzm2.eu"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 100 ---
+event_id:            9f6dc2f8-6c44-4ca1-91b9-ed3ec9f7b5ee
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               pages.gitlab.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "pages.gitlab.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.1.1.1:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 101 ---
+event_id:            c59926ec-84df-4bb3-933e-ae2694aeadfd
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               partner-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "partner-uat.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "23.215.5.218",
+    "23.215.5.224"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "1.1.1.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 102 ---
+event_id:            91c57a33-df85-45c6-91aa-fd36a2fba5ff
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               partner-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "partner-uat.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2001:41a8:47:301::215:28b",
+    "2001:41a8:47:301::215:298"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "1.1.1.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 103 ---
+event_id:            dccd972f-07a6-4114-bce5-5942efeb8ade
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               partner-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "partner-uat.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "partner-uat.lapp.com.edgekey.net",
+    "e111126.dscb.akamaiedge.net"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "1.1.1.1:53",
+    "208.67.220.220:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 104 ---
+event_id:            38a70091-3515-485d-9078-d114a3912edb
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               partner.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "partner.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "partner.lapp.com.edgekey.net",
+    "e377888.dscb.akamaiedge.net"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.0.0.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 105 ---
+event_id:            1fad5b20-4b0a-4d63-a7e6-5b5f8d2cf8dd
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               partner.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "partner.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2001:41a8:47:301::5f65:23ea",
+    "2001:41a8:47:301::215:2ab"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.0.0.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 106 ---
+event_id:            ab5bed27-d77b-4d93-9efa-13d7c22024d2
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               partner.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "partner.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "2.21.2.171",
+    "95.101.35.234"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.0.0.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 107 ---
+event_id:            e0013f6f-4d2a-4df9-afd5-8effdf5d89c3
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               pressreleases.epressi.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "pressreleases.epressi.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp.mail-lpr.net"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "149.112.112.112:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 108 ---
+event_id:            2098b4f8-cc24-4c3f-8310-707e67b923ca
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               pressreleases.epressi.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "pressreleases.epressi.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "35.228.205.41"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "149.112.112.112:53",
+    "8.8.8.8:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 109 ---
+event_id:            4a043e0e-444f-4784-9472-5f8cecb990bf
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               return.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "return.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "return.lapp.shrd.omm.cloud"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 110 ---
+event_id:            1776ebb4-c6c7-420a-8ec8-269ea76743a2
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               return.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "return.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a01:4f8:c011:41a::1"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 111 ---
+event_id:            482b204e-1e10-43e4-844f-c52406ecb095
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               return.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "return.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "49.12.20.145"
+  ],
+  "resolver_used": [
+    "1.1.1.1:53",
+    "8.8.4.4:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 112 ---
+event_id:            4f741363-ab23-496a-ac1d-479d8191a405
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               sa.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "sa.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "23.227.38.74"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 113 ---
+event_id:            207a6172-c879-4368-afc6-e3e5ce249258
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               sa.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "sa.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2620:127:f00f:e::"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 114 ---
+event_id:            86b30cc9-85a9-4239-9ccc-af14348a930a
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               sa.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "sa.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "lapp-southern-africa.myshopify.com",
+    "shops.myshopify.com"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 115 ---
+event_id:            b3e50f02-4e38-4e30-9c97-10134b944b81
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               servicenow.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "servicenow.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 116 ---
+event_id:            3c0b71a7-f74d-43c1-805a-f1f6e3a5ae5d
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               stream.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "stream.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 117 ---
+event_id:            c378d434-6526-46e1-bd89-30ecc8ac4e90
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               test-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "test-login.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "172.64.153.85",
+    "104.18.34.171"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 118 ---
+event_id:            90a4bbc8-86de-4047-b2e9-6e7fd579a181
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               test-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "test-login.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "test-lappgroup-cd-6vw7lh1frsd5fjro.edge.tenants.eu.auth0.com",
+    "pvsty8.eu.auth0.com.pivot.prod.auth0edge.com",
+    "auth0-ingress.eu.auth0.com.cdn.cloudflare.net"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 119 ---
+event_id:            5fa4e54e-45b6-418f-a955-5b78ea8f9e7e
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               test-login.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "test-login.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a06:98c1:3101::ac40:9955",
+    "2a06:98c1:3102::6812:22ab"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 120 ---
+event_id:            360c5ae4-68b7-45cc-abdd-0b199ca17171
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               test-useradmin-ciam.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "test-useradmin-ciam.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.199"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.0.0.1:53",
+    "8.8.4.4:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 121 ---
+event_id:            bb6c04f9-68df-4279-85a4-e5e93161ff44
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               tms-across.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "tms-across.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.15.20",
+    "165.160.13.20"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 122 ---
+event_id:            b52652de-d737-43b8-8b49-a6070c0b296e
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               try.return.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "try.return.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "dpl-messe.return.lapp.dev.omm.cloud"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "208.67.222.222:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 123 ---
+event_id:            1826d22a-130b-422d-819b-e405c1efb999
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               try.return.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "try.return.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a01:4f8:c011:dbe::1"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "208.67.222.222:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 124 ---
+event_id:            33fcf3cf-9490-4d7c-9af2-9cc89b7a2b09
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               try.return.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "try.return.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "142.132.244.70"
+  ],
+  "resolver_used": [
+    "8.8.8.8:53",
+    "208.67.222.222:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 125 ---
+event_id:            efee7b3a-d99c-488f-b9a3-e7a006b53291
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               uat.lappekanban.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "uat.lappekanban.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "85.125.87.157"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "8.8.4.4:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 126 ---
+event_id:            cbf7554f-442a-48d0-a3b4-a157b9caad76
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               us-in-sbc01.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "us-in-sbc01.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "97.78.67.69"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "208.67.222.222:53",
+    "149.112.112.112:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 127 ---
+event_id:            5ff70074-9c7d-4fc6-8e9a-d808152aecf9
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               useradmin-ciam.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "useradmin-ciam.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "94.186.180.199"
+  ],
+  "resolver_used": [
+    "8.8.4.4:53",
+    "1.1.1.1:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 128 ---
+event_id:            db3db432-8016-4e6f-b1b2-6c8febef9f19
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               wildcard.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "wildcard.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "165.160.13.20",
+    "165.160.15.20"
+  ],
+  "resolver_used": [
+    "9.9.9.9:53",
+    "208.67.220.220:53",
+    "1.0.0.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 129 ---
+event_id:            b063c531-75ab-4027-9d01-cda1cc4d5799
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www-uat.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "23.215.5.209",
+    "23.215.5.210"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 130 ---
+event_id:            f057d355-8d05-4f70-8e19-4963bb43bfb0
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www-uat.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a02:26f0:7100::210:12b",
+    "2a02:26f0:7100::210:148"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 131 ---
+event_id:            578e9ff7-f999-4cd6-8826-9e785aca6c65
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www-uat.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www-uat.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "www-uat.lapp.com.edgekey.net",
+    "e290862.dscb.akamaiedge.net"
+  ],
+  "resolver_used": [
+    "1.0.0.1:53",
+    "9.9.9.9:53",
+    "208.67.222.222:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 132 ---
+event_id:            bce4d936-430e-4236-b588-6bb1fbf20bdd
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www.e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www.e.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "151.101.1.124",
+    "151.101.65.124",
+    "151.101.129.124",
+    "151.101.193.124"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.1.1.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 133 ---
+event_id:            214a801f-bcd6-4d20-b7dc-3fa1ae5bcccf
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www.e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www.e.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2a04:4e42::380",
+    "2a04:4e42:200::380",
+    "2a04:4e42:400::380",
+    "2a04:4e42:600::380"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.1.1.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 134 ---
+event_id:            919196ac-dde4-4006-a29d-7fd2bdd2405d
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www.e.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www.e.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "prod.magentocloud.map.fastly.net"
+  ],
+  "resolver_used": [
+    "208.67.220.220:53",
+    "1.1.1.1:53",
+    "9.9.9.9:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 135 ---
+event_id:            be5c801c-ecbd-4634-8c1a-0b2aa5cec378
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www.lapp.com",
+  "record_type": "A",
+  "resolved_values": [
+    "95.101.111.142",
+    "95.101.111.186"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "208.67.222.222:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 136 ---
+event_id:            dbe6497c-fb25-4010-bfd2-f962444dc403
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www.lapp.com",
+  "record_type": "AAAA",
+  "resolved_values": [
+    "2001:41a8:47:301::215:2b1",
+    "2001:41a8:47:301::215:2c8"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "208.67.222.222:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 137 ---
+event_id:            8b6d50da-ac8a-4e82-9ba1-45a6634a93e5
+event_type:          DNS_RESOLVED
+target:              lapp.com
+asset:               www.lapp.com
+source_tool:         dnsx
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:32:30.401
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "hostname": "www.lapp.com",
+  "record_type": "CNAME",
+  "resolved_values": [
+    "www.lapp.com.edgekey.net",
+    "e255096.dscb.akamaiedge.net"
+  ],
+  "resolver_used": [
+    "149.112.112.112:53",
+    "208.67.222.222:53",
+    "1.1.1.1:53"
+  ],
+  "response_time_ms": 0
+}
+
+--- Row 138 ---
+event_id:            58200025-01b5-4023-8010-be135a992fca
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               a.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "a.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 139 ---
+event_id:            d4466bf7-100a-4e47-b076-7809be9b7230
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               admin.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "admin.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 140 ---
+event_id:            f10a259f-8ecc-4f97-98d4-fd73a3008b87
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 141 ---
+event_id:            3300dd5f-b40e-44db-865c-f726260f5e1c
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               api-uat.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "api-uat.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 142 ---
+event_id:            4f480e74-9d7d-48c9-a839-d6971dd61404
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               app.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "app.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 143 ---
+event_id:            cef4b46c-7d02-46a6-a38c-715042ceff27
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               app.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "app.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 144 ---
+event_id:            be8f2051-55fb-4f2e-8068-e805a35513c8
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               authsec.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "authsec.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 145 ---
+event_id:            848153ce-a974-4073-8c5f-7a383a3c9ad4
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               azure.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "azure.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 146 ---
+event_id:            bb3aea83-bb50-4cd1-9b5b-3dd86ee67a62
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               cdn.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "cdn.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 147 ---
+event_id:            2abee312-17a9-41be-a68a-0d772128685f
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               chainconfigurator.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "chainconfigurator.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 148 ---
+event_id:            5d1c27ef-d83e-4d0b-b681-e48e4b337fd0
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               changefit.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "changefit.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 149 ---
+event_id:            6f05d4df-c97b-4918-bd8c-44d7d1bba49d
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               click.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "click.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 150 ---
+event_id:            34c30fcf-d7e0-4033-8db5-b7f7574a73ac
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               configurator-test.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "configurator-test.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 151 ---
+event_id:            709cd629-c2cf-4077-a890-3bd1d48bc41c
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               configurator.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "configurator.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 152 ---
+event_id:            8f27eb51-69f2-45df-b864-3efb84aeb82e
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               dam-media.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "dam-media.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 153 ---
+event_id:            c0b173dc-939d-4891-924e-d4d7a59ea380
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               demo.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "demo.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 154 ---
+event_id:            c3bd2cf3-d742-4382-84d4-f1e37837c4a0
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               dev-login.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "dev-login.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 155 ---
+event_id:            6cd6bdf6-8d20-4f6e-b5a1-01872e201846
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               dev-useradmin-ciam.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "dev-useradmin-ciam.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 156 ---
+event_id:            98be3e33-e55f-4392-b68e-a135e019a3e8
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               dev.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "dev.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 157 ---
+event_id:            32d1d86f-6399-4581-8a97-4ea9783eb290
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               e.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "e.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 158 ---
+event_id:            3974e1e9-f6bd-4815-b2a7-5d692c150eeb
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               ekanban-test.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "ekanban-test.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 159 ---
+event_id:            38619b62-8d9b-4bb9-898b-1d255020ef93
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               ekanban.csc.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "ekanban.csc.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 160 ---
+event_id:            e8b30559-f1c2-48f8-8d9f-f980ad13b878
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               ekanban.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "ekanban.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 161 ---
+event_id:            20edcffb-b3cc-48b4-b9e7-c207ad153cb9
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               epressi.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "epressi.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 162 ---
+event_id:            c9d10170-8964-4fe3-ae5e-221e5fae623c
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               est-login.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "est-login.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 163 ---
+event_id:            dbb42eee-e8f7-49cd-9811-e74059e33617
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               events.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "events.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 164 ---
+event_id:            6b044016-ca31-40e7-9cc0-8fe8e78c2ed7
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               fo-configurator.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "fo-configurator.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 165 ---
+event_id:            b3d877cc-c83f-4b52-8161-761ac2beba7c
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               gamification.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "gamification.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 166 ---
+event_id:            eebe82fb-c251-450f-bec0-224c3c797a3b
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               gcp.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "gcp.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 167 ---
+event_id:            a67f439e-9cab-46b1-a9bc-3769ef759c2e
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               git.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "git.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 168 ---
+event_id:            eaabb8ad-edbb-4b93-aff4-e6c6c93eb863
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               git.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "git.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 169 ---
+event_id:            6259eeaf-467e-4ab2-a1a0-ffb14347abcb
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               gitlab.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "gitlab.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 170 ---
+event_id:            6908b81c-1559-42f4-8ad4-f4b8d691855a
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               imager-test.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "imager-test.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 171 ---
+event_id:            ab9b44a3-364c-4912-8bae-76b43308535e
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               imager.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "imager.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 172 ---
+event_id:            30cedabd-6b70-4c78-99cc-bc173f10b9a6
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               img.newsman.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "img.newsman.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 173 ---
+event_id:            af790786-3364-45dd-80d6-577144d9bdc1
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               inx-at.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "inx-at.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 174 ---
+event_id:            6a0e523d-cc28-4fe9-98e9-da80bc501fd9
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               inx-de.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "inx-de.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 175 ---
+event_id:            46010745-f916-42b8-90a4-1e0db1f92c22
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               inx-fr.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "inx-fr.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 176 ---
+event_id:            a25db8f7-c849-4717-8564-c4c222096506
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               inx-nl.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "inx-nl.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 177 ---
+event_id:            95f1c96d-38ed-4f1a-a961-73ffb30f9164
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               kariera.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "kariera.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 178 ---
+event_id:            1e3d577e-41d4-4074-bde7-d7f2f28cc6bc
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappasia.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappasia.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 179 ---
+event_id:            53ffafd5-a9a3-4ee5-a583-b6bc216cb7cd
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappcn.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappcn.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 180 ---
+event_id:            9ba4f8e7-0d8e-4194-b1a6-3e400d5d1c25
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappekanban.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappekanban.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 181 ---
+event_id:            aff7016b-98d5-4e55-bc3e-9458c8a48ca8
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappgo.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappgo.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 182 ---
+event_id:            9dd474f1-36a4-4c7c-8c94-e717e19f5431
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappin.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappin.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 183 ---
+event_id:            46eb3fb5-adff-48b2-8cb7-45260f1cbd0d
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappjp.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappjp.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 184 ---
+event_id:            409f2a63-8d81-498c-a37c-16d2c3964f36
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lappkr.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lappkr.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 185 ---
+event_id:            be9b9850-3815-4b95-a691-109b1bda6ea5
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lat-zeus.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lat-zeus.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 186 ---
+event_id:            a311dc6c-cfb6-47e1-8482-2e5bbc1a3640
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               latam.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "latam.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 187 ---
+event_id:            d0d96a2f-c201-4e98-8512-50f668d922e9
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lgw-guest.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lgw-guest.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 188 ---
+event_id:            b6dee7e4-4451-4366-80d0-9e307bd5d737
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               live.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "live.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 189 ---
+event_id:            deeed46f-0f4d-4f24-8dce-4b3fac1a21f4
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               lnl-3cx.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "lnl-3cx.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 190 ---
+event_id:            6c93ce08-509f-47e6-8ae1-2317502f5a67
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               login.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "login.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 191 ---
+event_id:            0e4777f4-98df-4dd9-a83d-ad7f7419a2e0
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mail2.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mail2.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 192 ---
+event_id:            8b2ee5c4-e5fc-47d9-b490-0fd0098046bd
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mbgtest-sg.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mbgtest-sg.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 193 ---
+event_id:            e89b5b63-813b-458d-be68-3cdfb6ebefdd
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mbgtestapi-sg.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mbgtestapi-sg.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 194 ---
+event_id:            ac248aa9-75dc-4922-a8ac-f57da1eaa2bb
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mcstaging-e.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mcstaging-e.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 195 ---
+event_id:            9ef91df1-b790-4bd6-a219-22196fbfc03a
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mediapool-api.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mediapool-api.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 196 ---
+event_id:            1dbfb35b-eb48-481b-95dd-4e731eec45f9
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mediapool-test-api.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mediapool-test-api.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 197 ---
+event_id:            4bce1eb3-0c1f-4e75-a30d-ddebf9555c88
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mediapool-test.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mediapool-test.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 198 ---
+event_id:            781daef2-3b38-4367-8fbe-f35b8bfac0e5
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               mediapool.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "mediapool.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 199 ---
+event_id:            9cbb1141-3419-42b1-9357-1ace21399b8c
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               myrex.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "myrex.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 200 ---
+event_id:            6de01c8a-5135-43a7-85db-a5ca2e0b8ca0
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               nl.newsman.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "nl.newsman.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 201 ---
+event_id:            398aa551-e8b4-472b-b4a4-fbe3f1f60b08
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               ns2.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "ns2.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 202 ---
+event_id:            8188122c-ad15-43e2-a4d3-de629eca7c1b
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               pages.gitlab.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "pages.gitlab.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 203 ---
+event_id:            c66e9f92-361b-4d2c-adcb-4032fd75749c
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               partner-uat.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "partner-uat.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 204 ---
+event_id:            29c4d2b9-01bf-45d1-98fc-d435827dcec7
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               partner.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "partner.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 205 ---
+event_id:            0451950b-79a1-43c5-b10c-35a1139ace15
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               pressreleases.epressi.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "pressreleases.epressi.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 206 ---
+event_id:            160147a4-3dd7-4e11-8164-7d78bdf3ab09
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               return.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "return.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 207 ---
+event_id:            e610034c-df58-486e-b76b-6ac64eaf12a5
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               sa.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "sa.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 208 ---
+event_id:            c6007bc6-7fcc-48aa-909d-2e77b52a6468
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               servicenow.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "servicenow.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 209 ---
+event_id:            6ab5af45-f7ba-47a5-8098-d76633bc2836
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               stats.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "stats.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 210 ---
+event_id:            f21a12b3-50bf-451d-bd4f-ea45fee633b2
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               stream.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "stream.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 211 ---
+event_id:            b546dfe7-6548-4de0-b701-27f886dc4a34
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               test-login.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "test-login.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 212 ---
+event_id:            cdf41e80-e683-4f8b-86be-d70e54b9e746
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               test-useradmin-ciam.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "test-useradmin-ciam.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 213 ---
+event_id:            6b0292dc-ea55-4b8d-8e10-d61845be9b23
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               test.api-shop.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "test.api-shop.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 214 ---
+event_id:            fcee7846-db4a-4f6d-a375-814ddb457a6b
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               tms-across.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "tms-across.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 215 ---
+event_id:            59082694-eb0e-4cb3-af15-31081fd85f99
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               try.return.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "try.return.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 216 ---
+event_id:            b1bd9ef3-acbd-438e-a2ff-5a0ee224d9f9
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               uat.lappekanban.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "uat.lappekanban.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 217 ---
+event_id:            1de88fbc-8da3-488f-9728-a594c09e483d
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               us-in-sbc01.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "us-in-sbc01.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 218 ---
+event_id:            3d54c8b2-ab09-4c7a-be29-cf3e1ef5014f
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               useradmin-ciam.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "useradmin-ciam.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 219 ---
+event_id:            5b7eda0f-dd26-48f1-b706-544ebdacd2a6
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               wildcard.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "wildcard.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 220 ---
+event_id:            858a1fc9-3adf-4c73-9076-b480630217ad
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               www-uat.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "www-uat.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 221 ---
+event_id:            fbf8827a-360d-4cb7-8577-fbc70c93b5ca
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               www.e.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "www.e.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 222 ---
+event_id:            1659d8fb-8300-4745-9352-684f8621a19e
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               www.events.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "www.events.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 223 ---
+event_id:            88f022d3-cd5a-4f7e-9c2d-f3fcfa318c3b
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               www.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "www.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
+--- Row 224 ---
+event_id:            6db1c072-2fe3-4061-92b1-c2c1afc5de67
+event_type:          SUBDOMAIN_FOUND
+target:              lapp.com
+asset:               www.lnl-3cx.lapp.com
+source_tool:         subfinder
+scan_id:             4a535da9-49c5-41ef-b940-8009edadfbfb
+scan_timestamp:      2026-05-23 00:31:59.451
+ingested_at:         2026-05-23 00:32:28.542
+producer_host:       laptop-001
+producer_version:    0.1.0
+data:
+{
+  "subdomain": "www.lnl-3cx.lapp.com",
+  "source": "passive",
+  "is_wildcard": false
+}
+
