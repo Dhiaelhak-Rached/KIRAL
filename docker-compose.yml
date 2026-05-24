@@ -5,7 +5,7 @@ services:
     image: redis:7-alpine
     container_name: asm-redis
     ports:
-      - "192.168.1.21:6379:6379"
+      - "0.0.0.0:6379:6379"
     volumes:
       - redis_data:/data
       - ./configs/redis.conf:/usr/local/etc/redis/redis.conf:ro
@@ -18,8 +18,8 @@ services:
     image: clickhouse/clickhouse-server:24.3
     container_name: asm-clickhouse
     ports:
-      - "192.168.1.21:8123:8123"
-      - "192.168.1.21:9000:9000"
+      - "0.0.0.0:8123:8123"
+      - "0.0.0.0:9000:9000"
     environment:
       CLICKHOUSE_DB: asm_pipeline
       CLICKHOUSE_USER: asm_ingestor
