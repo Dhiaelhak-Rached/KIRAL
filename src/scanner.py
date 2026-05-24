@@ -14,6 +14,8 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import AsyncIterator
 
+from src.config import settings
+
 logger = logging.getLogger(__name__)
 
 
@@ -39,6 +41,41 @@ class ToolRunner:
         self.timeout_sec = timeout_sec
         self.max_stdout_bytes = max_stdout_mb * 1024 * 1024
 
+    @staticmethod
+    async def _validate_tool_binary(tool_name: str):
+        """Ensure we are calling the correct binary (not a shadowed Python package)."""
+        if tool_name != "httpx":
+            return
+
+        try:
+            proc = await asyncio.create_subprocess_exec(
+                tool_name,
+                "-version",
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
+            )
+            stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=5)
+            text = stdout.decode("utf-8", errors="replace")
+            text += stderr.decode("utf-8", errors="replace")
+        except Exception:
+            # If -version fails entirely, it's almost certainly the wrong httpx
+            raise RuntimeError(
+                "Wrong 'httpx' binary detected. The Python 'httpx' library "
+                "(from your venv) is shadowing ProjectDiscovery's Go tool.\n"
+                "Fix: prepend your Go bin directory to PATH before running:\n"
+                '    $env:PATH = "C:\\Users\\rache\\go\\bin;$env:PATH"'
+            )
+
+        # PD httpx always prints a banner containing "projectdiscovery".
+        # Python httpx (or any other impostor) never does.
+        if "projectdiscovery" not in text.lower():
+            raise RuntimeError(
+                "Wrong 'httpx' binary detected. The Python 'httpx' library "
+                "(from your venv) is shadowing ProjectDiscovery's Go tool.\n"
+                "Fix: prepend your Go bin directory to PATH before running:\n"
+                '    $env:PATH = "C:\\Users\\rache\\go\\bin;$env:PATH"'
+            )
+
     async def run(
         self,
         cmd: list[str],
@@ -49,6 +86,7 @@ class ToolRunner:
         effective_timeout = timeout_sec if timeout_sec is not None else self.timeout_sec
         timestamp = _utc_now()
         tool_name = cmd[0]
+        await self._validate_tool_binary(tool_name)
         logger.info(f"[{tool_name}] starting for target={target}")
 
         try:
@@ -180,7 +218,53 @@ class Scanner:
     # ------------------------------------------------------------------ #
     # Stage 3: Port scanning
     # ------------------------------------------------------------------ #
+    # NOTE: naabu is preserved but commented out. RustScan is the active
+    # scanner. To restore naabu, uncomment the block below and comment
+    # out the rustscan() method.
+    # ------------------------------------------------------------------ #
     async def naabu(self, hosts: list[str], target: str) -> AsyncIterator[RawFinding]:
+        """DEPRECATED — preserved for easy restoration. Use rustscan() instead."""
+        # Original implementation commented out below. Uncomment to restore.
+        # ------------------------------------------------------------------
+        # if not hosts:
+        #     return
+        #
+        # with tempfile.NamedTemporaryFile(
+        #     mode="w", suffix=".txt", delete=False
+        # ) as f:
+        #     f.write("\n".join(hosts))
+        #     input_file = f.name
+        #
+        # try:
+        #     cmd = [
+        #         "naabu",
+        #         "-list", input_file,
+        #         "-top-ports", "1000",
+        #         "-silent",
+        #         "-json",
+        #         "-o", "-",
+        #         "-rate", "1000",
+        #     ]
+        #     async for finding in self.runner.run(cmd, target, timeout_sec=300):
+        #         if finding.raw_line:
+        #             yield finding
+        # finally:
+        #     try:
+        #         os.unlink(input_file)
+        #     except OSError:
+        #         pass
+        return
+        # ------------------------------------------------------------------
+
+    async def rustscan(
+        self, hosts: list[str], target: str
+    ) -> AsyncIterator[RawFinding]:
+        """Run RustScan for port discovery.
+
+        Profile-aware: stealth (top-1000, low concurrency) for home networks,
+        aggressive (full range, high concurrency) for server infrastructure.
+        Output is greppable text; JSON is not supported.
+        """
         if not hosts:
             return
 
@@ -191,15 +275,32 @@ class Scanner:
             input_file = f.name
 
         try:
-            cmd = [
-                "naabu",
-                "-list", input_file,
-                "-top-ports", "1000",
-                "-silent",
-                "-json",
-                "-o", "-",
-                "-rate", "1000",
-            ]
+            if settings.scan_profile == "aggressive":
+                cmd = [
+                    "rustscan",
+                    "-a", input_file,
+                    "--range", "1-65535",
+                    "-g",
+                    "--ulimit", "5000",
+                ]
+                logger.info(
+                    f"[{target}] rustscan aggressive profile: "
+                    f"full range 1-65535, ulimit=5000"
+                )
+            else:
+                cmd = [
+                    "rustscan",
+                    "-a", input_file,
+                    "--top",
+                    "-g",
+                    "--ulimit", "500",
+                    "-t", "1500",
+                    "-b", "500",
+                ]
+                logger.info(
+                    f"[{target}] rustscan stealth profile: "
+                    f"top-1000 ports, ulimit=500, batch=500"
+                )
             async for finding in self.runner.run(cmd, target, timeout_sec=300):
                 if finding.raw_line:
                     yield finding

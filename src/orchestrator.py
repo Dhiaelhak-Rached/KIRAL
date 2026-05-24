@@ -3,7 +3,7 @@
 Coordinates the four-stage reconnaissance pipeline on the laptop:
 1. Subdomain enumeration  (subfinder + amass)
 2. DNS resolution         (dnsx)
-3. Port scanning          (naabu)
+3. Port scanning          (rustscan)  # naabu preserved but replaced
 4. HTTP probing           (httpx)
 
 Normalized events are deduplicated and published to Redis Streams.
@@ -203,13 +203,19 @@ class PipelineOrchestrator:
             # ------------------------------------------------------------------
             # Stage 3: Port scanning
             # ------------------------------------------------------------------
+            # NOTE: naabu call is preserved below but commented out.
+            # RustScan is the active scanner for full 1-65535 coverage.
+            # ------------------------------------------------------------------
             if self.ips:
                 logger.info(
                     f"Stage 3/4: Port scanning for {len(self.ips)} IPs"
                 )
                 port_count = await self._process_findings(
-                    self.scanner.naabu(list(self.ips), self.target)
+                    self.scanner.rustscan(list(self.ips), self.target)
                 )
+                # port_count = await self._process_findings(
+                #     self.scanner.naabu(list(self.ips), self.target)
+                # )
                 logger.info(f"Stage 3 complete: ports_found={port_count}")
 
             if self.shutdown_event.is_set():

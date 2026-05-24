@@ -67,7 +67,8 @@ class EventNormalizer:
             "subfinder": self._parse_subfinder,
             "amass": self._parse_amass,
             "dnsx": self._parse_dnsx,
-            "naabu": self._parse_naabu,
+            # "naabu": self._parse_naabu,  # replaced by rustscan
+            "rustscan": self._parse_rustscan,
             "httpx": self._parse_httpx,
         }
         parser = parsers.get(raw.tool)
@@ -137,25 +138,65 @@ class EventNormalizer:
                 events.append(ev)
         return events
 
-    def _parse_naabu(self, raw: RawFinding) -> Optional[dict]:
-        try:
-            j = json.loads(raw.raw_line)
-        except json.JSONDecodeError:
-            return None
+    # NOTE: naabu parser preserved but commented out. rustscan replaces it.
+    # def _parse_naabu(self, raw: RawFinding) -> Optional[dict]:
+    #     try:
+    #         j = json.loads(raw.raw_line)
+    #     except json.JSONDecodeError:
+    #         return None
+    #
+    #     ip = j.get("ip", j.get("host", ""))
+    #     port = j.get("port", 0)
+    #     if not ip or not port:
+    #         return None
+    #
+    #     event = self._base_event(raw, "PORT_FOUND", f"{ip}:{port}")
+    #     event["data"] = {
+    #         "ip": ip,
+    #         "port": port,
+    #         "protocol": j.get("protocol", "tcp"),
+    #         "scan_type": j.get("scan_type", "connect"),
+    #     }
+    #     return event
 
-        ip = j.get("ip", j.get("host", ""))
-        port = j.get("port", 0)
-        if not ip or not port:
-            return None
+    def _parse_rustscan(self, raw: RawFinding) -> list[dict]:
+        """Parse RustScan greppable output into PORT_FOUND events.
 
-        event = self._base_event(raw, "PORT_FOUND", f"{ip}:{port}")
-        event["data"] = {
-            "ip": ip,
-            "port": port,
-            "protocol": j.get("protocol", "tcp"),
-            "scan_type": j.get("scan_type", "connect"),
-        }
-        return event
+        Greppable format: 192.168.1.1 -> [80, 443, 8080]
+        Returns one event per open port.
+        """
+        line = raw.raw_line.strip()
+        if not line or " -> [" not in line:
+            return []
+
+        # Split IP from port list
+        ip_part, ports_part = line.split(" -> [", 1)
+        ip = ip_part.strip()
+
+        # Remove trailing bracket and split ports
+        ports_str = ports_part.rstrip("]")
+        if not ports_str:
+            return []
+
+        ports = [p.strip() for p in ports_str.split(",")]
+
+        events = []
+        for p in ports:
+            try:
+                port_num = int(p)
+            except ValueError:
+                continue
+
+            event = self._base_event(raw, "PORT_FOUND", f"{ip}:{port_num}")
+            event["data"] = {
+                "ip": ip,
+                "port": port_num,
+                "protocol": "tcp",
+                "scan_type": "syn",
+            }
+            events.append(event)
+
+        return events
 
     def _parse_httpx(self, raw: RawFinding) -> Optional[dict]:
         try:

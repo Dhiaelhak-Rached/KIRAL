@@ -1,5 +1,7 @@
 """Centralized configuration loaded from environment variables."""
 
+from typing import Literal
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -33,6 +35,9 @@ class Settings(BaseSettings):
 
     # Safety
     max_events_per_scan: int = 500_000
+
+    # Scan behaviour
+    scan_profile: Literal["stealth", "aggressive"] = "stealth"
 
     # Logging
     log_level: str = "INFO"
