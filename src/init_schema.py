@@ -46,6 +46,36 @@ SETTINGS index_granularity = 8192
 """
 
 
+async def init_schema(user: str = "default", password: str | None = None) -> None:
+    """Initialize ClickHouse database and tables.
+
+    Args:
+        user: Admin username with DDL privileges.
+        password: Admin password.
+    """
+    client = ClickHouseClient(
+        username=user,
+        password=password or None,
+    )
+    try:
+        logger.info(
+            f"Initializing schema as user={user} in database={settings.ch_database}"
+        )
+        await client.execute(
+            CREATE_DATABASE_SQL.format(db=settings.ch_database)
+        )
+        await client.execute(
+            CREATE_TABLE_SQL.format(db=settings.ch_database),
+            database=settings.ch_database,
+        )
+        logger.info("Schema initialized successfully")
+    except Exception as exc:
+        logger.error(f"Schema initialization failed: {exc}")
+        raise
+    finally:
+        await client.close()
+
+
 async def main():
     parser = argparse.ArgumentParser(
         description="Initialize ClickHouse schema (one-time admin operation)"
@@ -61,28 +91,7 @@ async def main():
         help="Admin password (default: empty)",
     )
     args = parser.parse_args()
-
-    client = ClickHouseClient(
-        username=args.user,
-        password=args.password or None,
-    )
-    try:
-        logger.info(
-            f"Initializing schema as user={args.user} in database={settings.ch_database}"
-        )
-        await client.execute(
-            CREATE_DATABASE_SQL.format(db=settings.ch_database)
-        )
-        await client.execute(
-            CREATE_TABLE_SQL.format(db=settings.ch_database),
-            database=settings.ch_database,
-        )
-        logger.info("Schema initialized successfully")
-    except Exception as exc:
-        logger.error(f"Schema initialization failed: {exc}")
-        raise
-    finally:
-        await client.close()
+    await init_schema(user=args.user, password=args.password or None)
 
 
 if __name__ == "__main__":

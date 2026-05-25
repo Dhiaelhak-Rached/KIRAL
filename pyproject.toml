@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kiral"
+version = "0.2.0"
+description = "KIRAL — Attack Surface Intelligence Terminal"
+readme = "mdfiles/HOW_IT_WORKS.md"
+requires-python = ">=3.10"
+dependencies = [
+    "redis>=5.0.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
+    "typer>=0.12.0",
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+kiral = "src.cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
