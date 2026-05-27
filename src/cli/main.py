@@ -72,6 +72,17 @@ def export(
     export_cmd(domain, output)
 
 
+@app.command(rich_help_panel="Data")
+def vulns(
+    domain: str = typer.Argument(..., help="Target domain to inspect"),
+    severity: Optional[str] = typer.Option(None, "--severity", "-s", help="Filter by severity: critical, high, medium, low, info"),
+    limit: int = typer.Option(100, "--limit", "-n", help="Max rows to return"),
+) -> None:
+    """Display vulnerability findings for a scanned domain."""
+    from src.cli.vulns_cmd import vulns_cmd
+    vulns_cmd(domain, severity, limit)
+
+
 # --------------------------------------------------------------------------- #
 # Monitoring
 # --------------------------------------------------------------------------- #
@@ -82,6 +93,15 @@ def dashboard(
     """Launch a live monitoring dashboard for the pipeline."""
     from src.cli.dashboard_cmd import dashboard_cmd
     dashboard_cmd(refresh)
+
+
+@app.command(rich_help_panel="Monitoring")
+def debug(
+    domain: str = typer.Argument(..., help="Target domain to debug"),
+) -> None:
+    """Debug pipeline state for a specific domain (Redis vs ClickHouse)."""
+    from src.cli.debug_cmd import debug_cmd
+    debug_cmd(domain)
 
 
 if __name__ == "__main__":
