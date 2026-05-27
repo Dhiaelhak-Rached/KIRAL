@@ -53,3 +53,5 @@ redis_data/
 *.db
 *.sqlite
 *.sqlite3
+*.tar.gz
+-
