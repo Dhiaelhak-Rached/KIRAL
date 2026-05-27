@@ -311,6 +311,42 @@ class Scanner:
                 pass
 
     # ------------------------------------------------------------------ #
+    # Stage 5: Vulnerability detection
+    # ------------------------------------------------------------------ #
+    async def nuclei(self, urls: list[str], target: str) -> AsyncIterator[RawFinding]:
+        """Run Nuclei vulnerability scanner against discovered service URLs.
+
+        Output is JSON Lines (-jsonl), one vulnerability per line.
+        Severity is filtered to low/medium/high/critical to skip info noise.
+        """
+        if not urls:
+            return
+
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".txt", delete=False
+        ) as f:
+            f.write("\n".join(urls))
+            input_file = f.name
+
+        try:
+            cmd = [
+                "nuclei",
+                "-l", input_file,
+                "-jsonl",
+                "-o", "-",
+                "-silent",
+                "-severity", "low,medium,high,critical",
+            ]
+            async for finding in self.runner.run(cmd, target, timeout_sec=600):
+                if finding.raw_line:
+                    yield finding
+        finally:
+            try:
+                os.unlink(input_file)
+            except OSError:
+                pass
+
+    # ------------------------------------------------------------------ #
     # Stage 4: HTTP probing
     # ------------------------------------------------------------------ #
     async def httpx(self, urls: list[str], target: str) -> AsyncIterator[RawFinding]:

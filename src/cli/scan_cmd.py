@@ -59,6 +59,7 @@ class RichOrchestrator(PipelineOrchestrator):
         self.subdomains: set[str] = set()
         self.ips: set[str] = set()
         self.urls: list[str] = []
+        self.services: set[str] = set()
 
         self.reporter = reporter
         self._stage_idx = 0
@@ -81,6 +82,8 @@ class RichOrchestrator(PipelineOrchestrator):
                     count = len(self.urls)
                 elif self._stage_idx == 3:
                     count = len(self.urls)
+                elif self._stage_idx == 4:
+                    count = len(self.services)
                 self.reporter.update_count(self._stage_idx, count)
                 self.reporter.update_published(self.producer.published_count)
 
@@ -175,6 +178,19 @@ class RichOrchestrator(PipelineOrchestrator):
                     total_http += chunk_count
                 self.reporter.set_stage_done(3, total_http)
 
+            if self.shutdown_event.is_set():
+                return
+
+            # Stage 5
+            service_urls = sorted({u for u in self.services if u})
+            if service_urls:
+                self._stage_idx = 4
+                self.reporter.set_stage_active(4)
+                vuln_count = await self._process_findings(
+                    self.scanner.nuclei(service_urls, self.target)
+                )
+                self.reporter.set_stage_done(4, vuln_count)
+
             elapsed = (datetime.now(timezone.utc) - start_time).total_seconds()
             self.reporter.update_published(self.producer.published_count)
 
@@ -183,7 +199,7 @@ class RichOrchestrator(PipelineOrchestrator):
             raise
         finally:
             # Mark any remaining stages as completed so spinners stop
-            for i in range(4):
+            for i in range(5):
                 if self.reporter.stages[i].status != "completed":
                     self.reporter.set_stage_done(i, 0)
             self.reporter.stop()
@@ -242,6 +258,7 @@ def _print_completion_report(orch: RichOrchestrator, reporter: ScanReporter) -> 
         "Subdomains": len(orch.subdomains),
         "Unique IPs": len(orch.ips),
         "Candidate URLs": len(orch.urls),
+        "Vulnerabilities": reporter.stages[4].count if reporter.stages else 0,
         "Total Events": orch.producer.published_count,
     }
 

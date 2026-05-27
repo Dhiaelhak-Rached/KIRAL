@@ -32,6 +32,12 @@ def dedup_key(event: dict) -> str:
 
     if event_type == "SUBDOMAIN_FOUND":
         raw = f"sub:{event['asset']}"
+    elif event_type == "VULNERABILITY_FOUND":
+        raw = (
+            f"vuln:{data.get('host', '')}:"
+            f"{data.get('template_id', '')}:"
+            f"{data.get('matcher_name', '')}"
+        )
     elif event_type == "DNS_RESOLVED":
         vals = ",".join(sorted(data.get("resolved_values", [])))
         raw = f"dns:{data.get('hostname', '')}:{data.get('record_type', '')}:{vals}"
@@ -70,6 +76,7 @@ class EventNormalizer:
             # "naabu": self._parse_naabu,  # replaced by rustscan
             "rustscan": self._parse_rustscan,
             "httpx": self._parse_httpx,
+            "nuclei": self._parse_nuclei,
         }
         parser = parsers.get(raw.tool)
         if not parser:
@@ -227,6 +234,32 @@ class EventNormalizer:
             },
             "tls_version": j.get("tls_version", ""),
             "response_hash_sha256": j.get("body_sha256", ""),
+        }
+        return event
+
+    def _parse_nuclei(self, raw: RawFinding) -> Optional[dict]:
+        """Parse Nuclei JSON line into VULNERABILITY_FOUND event."""
+        try:
+            j = json.loads(raw.raw_line)
+        except json.JSONDecodeError:
+            return None
+
+        host = j.get("host", "")
+        if not host:
+            return None
+
+        info = j.get("info", {})
+        event = self._base_event(raw, "VULNERABILITY_FOUND", host)
+        event["data"] = {
+            "template_id": j.get("template-id", ""),
+            "name": info.get("name", ""),
+            "severity": info.get("severity", "unknown"),
+            "host": host,
+            "matched_at": j.get("matched-at", ""),
+            "tags": info.get("tags", []) or [],
+            "matcher_name": j.get("matcher-name", ""),
+            "type": j.get("type", ""),
+            "curl_command": j.get("curl-command", ""),
         }
         return event
 

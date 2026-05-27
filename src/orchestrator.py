@@ -1,10 +1,11 @@
 """Main pipeline orchestrator.
 
-Coordinates the four-stage reconnaissance pipeline on the laptop:
+Coordinates the five-stage reconnaissance pipeline:
 1. Subdomain enumeration  (subfinder + amass)
 2. DNS resolution         (dnsx)
 3. Port scanning          (rustscan)  # naabu preserved but replaced
 4. HTTP probing           (httpx)
+5. Vulnerability detection (nuclei)
 
 Normalized events are deduplicated and published to Redis Streams.
 """
@@ -71,6 +72,7 @@ class PipelineOrchestrator:
         self.subdomains: set[str] = set()
         self.ips: set[str] = set()
         self.urls: list[str] = []
+        self.services: set[str] = set()
 
     def _setup_signals(self):
         """Register graceful shutdown handlers where supported."""
@@ -149,6 +151,11 @@ class PipelineOrchestrator:
             else:
                 self.urls.append(f"http://{ip}:{port}")
                 self.urls.append(f"https://{ip}:{port}")
+
+        elif event_type == "SERVICE_DETECTED":
+            url = data.get("url", "")
+            if url:
+                self.services.add(url)
 
     async def run(self):
         """Execute the four-stage pipeline."""
@@ -265,6 +272,26 @@ class PipelineOrchestrator:
                 logger.info(
                     f"Stage 4 complete: services_detected={total_http}"
                 )
+
+            if self.shutdown_event.is_set():
+                return
+
+            # ------------------------------------------------------------------
+            # Stage 5: Vulnerability detection (nuclei)
+            # ------------------------------------------------------------------
+            service_urls = sorted({u for u in self.services if u})
+            if service_urls:
+                logger.info(
+                    f"Stage 5/5: Vulnerability detection for {len(service_urls)} URLs"
+                )
+                vuln_count = await self._process_findings(
+                    self.scanner.nuclei(service_urls, self.target)
+                )
+                logger.info(
+                    f"Stage 5 complete: vulnerabilities_found={vuln_count}"
+                )
+            else:
+                logger.info("Stage 5/5: Skipped (no services to scan)")
 
             elapsed = (datetime.now(timezone.utc) - start_time).total_seconds()
             logger.info(

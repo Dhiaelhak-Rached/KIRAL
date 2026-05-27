@@ -25,9 +25,10 @@ STAGE_NAMES = [
     "DNS Resolution",
     "Port Scanning",
     "HTTP Probing",
+    "Vulnerability Detection",
 ]
 
-STAGE_TOOLS = ["subfinder", "dnsx", "rustscan", "httpx"]
+STAGE_TOOLS = ["subfinder", "dnsx", "rustscan", "httpx", "nuclei"]
 
 
 @dataclass
@@ -44,7 +45,7 @@ class ScanReporter:
     def __init__(self) -> None:
         self.stages: list[StageState] = [
             StageState(name=STAGE_NAMES[i], tool=STAGE_TOOLS[i])
-            for i in range(4)
+            for i in range(len(STAGE_NAMES))
         ]
         self.published_total: int = 0
         self.start_time: float | None = None
@@ -82,7 +83,7 @@ class ScanReporter:
         for i, st in enumerate(self.stages):
             t = self._progress.add_task(
                 "",
-                name=f"Stage {i + 1}/4: {st.name}",
+                name=f"Stage {i + 1}/{len(self.stages)}: {st.name}",
                 count=0,
                 status_icon=self._icon(st.status),
                 total=100,
