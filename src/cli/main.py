@@ -84,6 +84,22 @@ def vulns(
 
 
 # --------------------------------------------------------------------------- #
+# Data Management
+# --------------------------------------------------------------------------- #
+@app.command(rich_help_panel="Data")
+def purge(
+    domain: str = typer.Argument(..., help="Target domain to purge"),
+    force: bool = typer.Option(False, "--force", "-f", help="Skip confirmation prompt"),
+    full: bool = typer.Option(False, "--full", help="Also clear entire Redis dedup cache (affects ALL domains)"),
+    ch_user: Optional[str] = typer.Option(None, "--ch-user", help="ClickHouse user with ALTER DELETE privileges"),
+    ch_password: Optional[str] = typer.Option(None, "--ch-password", help="ClickHouse password"),
+) -> None:
+    """Permanently delete all scan data for a domain from ClickHouse."""
+    from src.cli.purge_cmd import purge_cmd
+    purge_cmd(domain, force, full, ch_user, ch_password)
+
+
+# --------------------------------------------------------------------------- #
 # Monitoring
 # --------------------------------------------------------------------------- #
 @app.command(rich_help_panel="Monitoring")
