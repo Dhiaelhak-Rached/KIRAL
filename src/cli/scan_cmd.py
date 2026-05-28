@@ -28,11 +28,24 @@ from src.scanner import RawFinding, Scanner
 class RichOrchestrator(PipelineOrchestrator):
     """PipelineOrchestrator with Rich live-display hooks."""
 
-    def __init__(self, target: str, reporter: ScanReporter, scan_id: str | None = None):
+    def __init__(
+        self,
+        target: str,
+        reporter: ScanReporter,
+        scan_id: str | None = None,
+        nuclei_input: str | None = None,
+        passive_analysis: bool | None = None,
+    ):
         self.target = target
         self.scan_id = scan_id or str(uuid.uuid4())
         self.shutdown_event = asyncio.Event()
         self._setup_signals()
+
+        # Scan behaviour toggles
+        self.nuclei_input = nuclei_input or settings.nuclei_input
+        self.passive_analysis_enabled = (
+            passive_analysis if passive_analysis is not None else settings.passive_analysis
+        )
 
         import redis.asyncio as redis
         self.redis_client = redis.Redis(
@@ -53,6 +66,8 @@ class RichOrchestrator(PipelineOrchestrator):
             scan_id=self.scan_id,
             producer_host=settings.producer_host,
         )
+        from src.passive_analyzer import PassiveAnalyzer
+        self.passive_analyzer = PassiveAnalyzer()
         self.scanner = Scanner()
         self.safety = SafetyLimiter(settings.max_events_per_scan)
 
@@ -205,14 +220,20 @@ class RichOrchestrator(PipelineOrchestrator):
                 return
 
             # Stage 6: Vulnerability Detection (nuclei)
-            service_urls = sorted({u for u in self.services if u})
-            if service_urls:
+            if self.nuclei_input == "all-urls":
+                nuclei_targets = sorted(set(self.urls))
+            else:
+                nuclei_targets = sorted({u for u in self.services if u})
+
+            if nuclei_targets:
                 self._stage_idx = 5
                 self.reporter.set_stage_active(5)
                 vuln_count = await self._process_findings(
-                    self.scanner.nuclei(service_urls, self.target)
+                    self.scanner.nuclei(nuclei_targets, self.target)
                 )
                 self.reporter.set_stage_done(5, vuln_count)
+            else:
+                self.reporter.set_stage_done(5, 0)
 
             elapsed = (datetime.now(timezone.utc) - start_time).total_seconds()
             self.reporter.update_published(self.producer.published_count)
@@ -229,7 +250,12 @@ class RichOrchestrator(PipelineOrchestrator):
             await self.redis_client.aclose()
 
 
-def scan_cmd(domain: str, profile: Optional[str]) -> None:
+def scan_cmd(
+    domain: str,
+    profile: Optional[str],
+    nuclei_input: Optional[str],
+    passive_analysis: bool,
+) -> None:
     """Launch a full reconnaissance scan with live dashboard."""
     target = domain.strip().lower()
     if not validate_target(target):
@@ -238,6 +264,10 @@ def scan_cmd(domain: str, profile: Optional[str]) -> None:
 
     if profile:
         settings.scan_profile = profile  # type: ignore[misc]
+    if nuclei_input:
+        settings.nuclei_input = nuclei_input  # type: ignore[misc]
+    if passive_analysis:
+        settings.passive_analysis = passive_analysis  # type: ignore[misc]
 
     console.print(make_banner())
     console.print()
@@ -260,7 +290,12 @@ def scan_cmd(domain: str, profile: Optional[str]) -> None:
     console.print()
 
     reporter = ScanReporter()
-    orchestrator = RichOrchestrator(target, reporter)
+    orchestrator = RichOrchestrator(
+        target,
+        reporter,
+        nuclei_input=nuclei_input,
+        passive_analysis=passive_analysis,
+    )
     try:
         asyncio.run(orchestrator.run())
     except KeyboardInterrupt:

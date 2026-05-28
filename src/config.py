@@ -40,6 +40,8 @@ class Settings(BaseSettings):
 
     # Scan behaviour
     scan_profile: Literal["stealth", "aggressive"] = "stealth"
+    nuclei_input: Literal["services", "all-urls"] = "services"
+    passive_analysis: bool = False
 
     # Logging
     log_level: str = "INFO"

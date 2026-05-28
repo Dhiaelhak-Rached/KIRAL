@@ -9,9 +9,11 @@ from __future__ import annotations
 import asyncio
 import logging
 import os
+import subprocess
 import tempfile
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
 from typing import AsyncIterator
 
 from src.config import settings
@@ -364,6 +366,64 @@ class Scanner:
     # ------------------------------------------------------------------ #
     # Stage 5: Vulnerability detection
     # ------------------------------------------------------------------ #
+    def _ensure_nuclei_templates(self) -> None:
+        """Update nuclei templates if they haven't been updated in 24h."""
+        cache_dir = Path.home() / ".kiral"
+        cache_dir.mkdir(parents=True, exist_ok=True)
+        last_update_file = cache_dir / "nuclei_last_update"
+
+        now = datetime.now(timezone.utc)
+        needs_update = True
+        if last_update_file.exists():
+            try:
+                last_update = datetime.fromtimestamp(
+                    last_update_file.stat().st_mtime, tz=timezone.utc
+                )
+                if now - last_update < timedelta(hours=24):
+                    needs_update = False
+            except Exception:
+                pass
+
+        if not needs_update:
+            logger.debug("Nuclei templates are current (< 24h old)")
+            self._log_template_count()
+            return
+
+        logger.info("Updating nuclei templates...")
+        try:
+            result = subprocess.run(
+                ["nuclei", "-update-templates"],
+                capture_output=True,
+                text=True,
+                timeout=120,
+            )
+            if result.returncode == 0:
+                last_update_file.touch()
+                logger.info("Nuclei templates updated successfully")
+            else:
+                logger.warning(f"Nuclei template update failed: {result.stderr[:300]}")
+        except Exception as exc:
+            logger.warning(f"Nuclei template update error: {exc}")
+
+        self._log_template_count()
+
+    def _log_template_count(self) -> None:
+        """Log the number of available nuclei templates."""
+        try:
+            result = subprocess.run(
+                ["nuclei", "-tl"],
+                capture_output=True,
+                text=True,
+                timeout=30,
+            )
+            if result.returncode == 0:
+                count = len([l for l in result.stdout.splitlines() if l.strip()])
+                logger.info(f"Nuclei templates available: {count}")
+            else:
+                logger.warning("Could not count nuclei templates")
+        except Exception as exc:
+            logger.debug(f"Template count error: {exc}")
+
     async def nuclei(self, urls: list[str], target: str) -> AsyncIterator[RawFinding]:
         """Run Nuclei vulnerability scanner against discovered service URLs.
 
@@ -372,6 +432,8 @@ class Scanner:
         """
         if not urls:
             return
+
+        self._ensure_nuclei_templates()
 
         with tempfile.NamedTemporaryFile(
             mode="w", suffix=".txt", delete=False
@@ -387,6 +449,9 @@ class Scanner:
                 "-o", "-",
                 "-silent",
                 "-severity", "low,medium,high,critical",
+                "-timeout", "10",
+                "-retries", "1",
+                "-max-host-error", "30",
             ]
             async for finding in self.runner.run(cmd, target, timeout_sec=600):
                 if finding.raw_line:

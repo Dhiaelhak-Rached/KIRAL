@@ -25,10 +25,12 @@ app = typer.Typer(
 def scan(
     domain: str = typer.Argument(..., help="Target domain to scan (e.g. example.com)"),
     profile: Optional[str] = typer.Option(None, "--profile", "-p", help="Scan profile: stealth or aggressive"),
+    nuclei_input: Optional[str] = typer.Option(None, "--nuclei-input", help="Nuclei input mode: services (default) or all-urls"),
+    passive_analysis: bool = typer.Option(False, "--passive-analysis", help="Enable passive response analysis (CORS, headers, exposed files)"),
 ) -> None:
     """Launch a full reconnaissance scan with live dashboard."""
     from src.cli.scan_cmd import scan_cmd
-    scan_cmd(domain, profile)
+    scan_cmd(domain, profile, nuclei_input, passive_analysis)
 
 
 @app.command(rich_help_panel="Operations")

@@ -98,6 +98,24 @@ def _check_consumer() -> tuple[str, str]:
         return "error", str(exc)
 
 
+def _check_nuclei_templates() -> tuple[str, str]:
+    try:
+        result = subprocess.run(
+            ["nuclei", "-tl"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if result.returncode == 0:
+            count = len([l for l in result.stdout.splitlines() if l.strip()])
+            if count == 0:
+                return "warning", "0 templates — run nuclei -update-templates"
+            return "ok", f"{count:,} templates"
+        return "warning", "could not list templates"
+    except Exception as exc:
+        return "error", str(exc)
+
+
 def status_cmd() -> None:
     """Check health of all KIRAL components."""
     console.print(make_banner())
@@ -120,6 +138,9 @@ def status_cmd() -> None:
 
     cons_status, cons_detail = _check_consumer()
     table.add_row("Consumer", make_status_badge(cons_status), cons_detail)
+
+    tmpl_status, tmpl_detail = _check_nuclei_templates()
+    table.add_row("Nuclei Templates", make_status_badge(tmpl_status), tmpl_detail)
 
     panel = Panel(
         table,

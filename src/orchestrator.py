@@ -24,6 +24,7 @@ import redis.asyncio as redis
 
 from src.config import settings
 from src.normalizer import Deduplicator, EventNormalizer
+from src.passive_analyzer import PassiveAnalyzer
 from src.producer import RedisEventProducer
 from src.safety import SafetyLimiter, validate_target
 from src.scanner import RawFinding, Scanner
@@ -39,11 +40,23 @@ logger = logging.getLogger(__name__)
 class PipelineOrchestrator:
     """End-to-end scan orchestrator running on the laptop."""
 
-    def __init__(self, target: str, scan_id: str | None = None):
+    def __init__(
+        self,
+        target: str,
+        scan_id: str | None = None,
+        nuclei_input: str | None = None,
+        passive_analysis: bool | None = None,
+    ):
         self.target = target
         self.scan_id = scan_id or str(uuid.uuid4())
         self.shutdown_event = asyncio.Event()
         self._setup_signals()
+
+        # Scan behaviour toggles
+        self.nuclei_input = nuclei_input or settings.nuclei_input
+        self.passive_analysis_enabled = (
+            passive_analysis if passive_analysis is not None else settings.passive_analysis
+        )
 
         # Redis client (shared for producer + dedup)
         self.redis_client = redis.Redis(
@@ -66,6 +79,7 @@ class PipelineOrchestrator:
             scan_id=self.scan_id,
             producer_host=settings.producer_host,
         )
+        self.passive_analyzer = PassiveAnalyzer()
         self.scanner = Scanner()
         self.safety = SafetyLimiter(settings.max_events_per_scan)
 
@@ -88,6 +102,19 @@ class PipelineOrchestrator:
     def _handle_shutdown(self):
         logger.info("Shutdown signal received, finishing current stage...")
         self.shutdown_event.set()
+
+    async def _publish_single(self, event: dict) -> bool:
+        """Deduplicate and publish one event. Return True if published."""
+        try:
+            is_dup = await self.dedup.is_duplicate(event)
+            if is_dup:
+                return False
+            await self.producer.publish(event)
+            self._extract_downstream_data(event)
+            return True
+        except Exception as exc:
+            logger.error(f"Event pipeline error: {exc}")
+            return False
 
     async def _process_findings(
         self, findings: asyncio.AsyncIterator[RawFinding]
@@ -115,17 +142,23 @@ class PipelineOrchestrator:
 
             events = normalized if isinstance(normalized, list) else [normalized]
             for event in events:
-                try:
-                    is_dup = await self.dedup.is_duplicate(event)
-                    if is_dup:
-                        continue
-
-                    await self.producer.publish(event)
+                if await self._publish_single(event):
                     published += 1
-                    self._extract_downstream_data(event)
-                except Exception as exc:
-                    logger.error(f"Event pipeline error: {exc}")
-                    continue
+
+                # Passive analysis on SERVICE_DETECTED / URL_DISCOVERED
+                if (
+                    self.passive_analysis_enabled
+                    and event.get("event_type") in ("SERVICE_DETECTED", "URL_DISCOVERED")
+                ):
+                    for passive_event in self.passive_analyzer.analyze(event):
+                        # Enrich with scan metadata
+                        passive_event["scan_id"] = self.scan_id
+                        passive_event["scan_timestamp"] = event.get(
+                            "scan_timestamp", ""
+                        )
+                        passive_event["metadata"] = event.get("metadata", {})
+                        if await self._publish_single(passive_event):
+                            published += 1
 
         return published
 
@@ -302,19 +335,24 @@ class PipelineOrchestrator:
             # ------------------------------------------------------------------
             # Stage 6: Vulnerability detection (nuclei)
             # ------------------------------------------------------------------
-            service_urls = sorted({u for u in self.services if u})
-            if service_urls:
+            if self.nuclei_input == "all-urls":
+                nuclei_targets = sorted(set(self.urls))
+            else:
+                nuclei_targets = sorted({u for u in self.services if u})
+
+            if nuclei_targets:
                 logger.info(
-                    f"Stage 6/6: Vulnerability detection for {len(service_urls)} URLs"
+                    f"Stage 6/6: Vulnerability detection for {len(nuclei_targets)} URLs "
+                    f"(mode={self.nuclei_input})"
                 )
                 vuln_count = await self._process_findings(
-                    self.scanner.nuclei(service_urls, self.target)
+                    self.scanner.nuclei(nuclei_targets, self.target)
                 )
                 logger.info(
                     f"Stage 6 complete: vulnerabilities_found={vuln_count}"
                 )
             else:
-                logger.info("Stage 6/6: Skipped (no services to scan)")
+                logger.info("Stage 6/6: Skipped (no targets to scan)")
 
             elapsed = (datetime.now(timezone.utc) - start_time).total_seconds()
             logger.info(
