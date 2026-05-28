@@ -53,3 +53,28 @@ redis_data/
 *.db
 *.sqlite
 *.sqlite3
+*.tar.gz
+-
+# Archives
+*.tar.gz
+*.zip
+*.rar
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+
+# Temporary
+tmp/
+temp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Weird accidental file
+-
