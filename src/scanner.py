@@ -11,6 +11,7 @@ import logging
 import os
 import subprocess
 import tempfile
+import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -105,19 +106,27 @@ class ToolRunner:
         bytes_read = 0
         line_count = 0
 
+        start_time = time.monotonic()
         try:
             while True:
-                try:
-                    line = await asyncio.wait_for(
-                        proc.stdout.readline(),
-                        timeout=effective_timeout,
-                    )
-                except asyncio.TimeoutError:
+                elapsed = time.monotonic() - start_time
+                remaining = effective_timeout - elapsed
+                if remaining <= 0:
                     proc.kill()
                     await proc.wait()
                     raise RuntimeError(
                         f"[{tool_name}] timed out after {effective_timeout}s"
                     )
+
+                try:
+                    line = await asyncio.wait_for(
+                        proc.stdout.readline(),
+                        timeout=min(30, remaining),
+                    )
+                except asyncio.TimeoutError:
+                    if proc.returncode is not None:
+                        break
+                    continue
 
                 if not line:
                     break
@@ -433,7 +442,7 @@ class Scanner:
         if not urls:
             return
 
-        self._ensure_nuclei_templates()
+        await asyncio.to_thread(self._ensure_nuclei_templates)
 
         with tempfile.NamedTemporaryFile(
             mode="w", suffix=".txt", delete=False
