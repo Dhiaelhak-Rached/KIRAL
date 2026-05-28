@@ -147,7 +147,28 @@ class RichOrchestrator(PipelineOrchestrator):
             if self.shutdown_event.is_set():
                 return
 
-            # Stage 4
+            # Stage 4: URL Discovery (gau + katana)
+            if self.subdomains:
+                self._stage_idx = 3
+                self.reporter.set_stage_active(3)
+                url_tools = {
+                    "gau": self.scanner.gau(self.target),
+                    "katana": self.scanner.katana(list(self.subdomains), self.target),
+                }
+                tasks = {
+                    name: asyncio.create_task(self._process_findings(it))
+                    for name, it in url_tools.items()
+                }
+                results = await asyncio.gather(*tasks.values(), return_exceptions=True)
+                for (name, _), res in zip(tasks.items(), results):
+                    if isinstance(res, Exception):
+                        console.print(f"[kiral.error][{name}] failed: {res}")
+                self.reporter.set_stage_done(3, len(self.urls))
+
+            if self.shutdown_event.is_set():
+                return
+
+            # Stage 5: HTTP Probing
             for sub in self.subdomains:
                 self.urls.extend(
                     [
@@ -166,8 +187,8 @@ class RichOrchestrator(PipelineOrchestrator):
             self.urls = deduped
 
             if self.urls:
-                self._stage_idx = 3
-                self.reporter.set_stage_active(3)
+                self._stage_idx = 4
+                self.reporter.set_stage_active(4)
                 chunk_size = 5_000
                 total_http = 0
                 for i in range(0, len(self.urls), chunk_size):
@@ -183,7 +204,7 @@ class RichOrchestrator(PipelineOrchestrator):
             if self.shutdown_event.is_set():
                 return
 
-            # Stage 6
+            # Stage 6: Vulnerability Detection (nuclei)
             service_urls = sorted({u for u in self.services if u})
             if service_urls:
                 self._stage_idx = 5
