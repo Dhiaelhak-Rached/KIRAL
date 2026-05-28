@@ -32,6 +32,8 @@ def dedup_key(event: dict) -> str:
 
     if event_type == "SUBDOMAIN_FOUND":
         raw = f"sub:{event['asset']}"
+    elif event_type == "URL_DISCOVERED":
+        raw = f"url:{event['asset']}"
     elif event_type == "VULNERABILITY_FOUND":
         raw = (
             f"vuln:{data.get('host', '')}:"
@@ -76,6 +78,8 @@ class EventNormalizer:
             # "naabu": self._parse_naabu,  # replaced by rustscan
             "rustscan": self._parse_rustscan,
             "httpx": self._parse_httpx,
+            "gau": self._parse_gau,
+            "katana": self._parse_katana,
             "nuclei": self._parse_nuclei,
         }
         parser = parsers.get(raw.tool)
@@ -234,6 +238,40 @@ class EventNormalizer:
             },
             "tls_version": j.get("tls_version", ""),
             "response_hash_sha256": j.get("body_sha256", ""),
+        }
+        return event
+
+    def _parse_gau(self, raw: RawFinding) -> Optional[dict]:
+        """Parse gau plain-text URL line into URL_DISCOVERED event."""
+        url = raw.raw_line.strip()
+        if not url or not url.startswith(("http://", "https://")):
+            return None
+        event = self._base_event(raw, "URL_DISCOVERED", url)
+        event["data"] = {
+            "url": url,
+            "source": "historical",
+            "provider": "gau",
+        }
+        return event
+
+    def _parse_katana(self, raw: RawFinding) -> Optional[dict]:
+        """Parse katana JSON line into URL_DISCOVERED event."""
+        try:
+            j = json.loads(raw.raw_line)
+        except json.JSONDecodeError:
+            return None
+
+        url = j.get("url", "")
+        if not url:
+            return None
+
+        event = self._base_event(raw, "URL_DISCOVERED", url)
+        event["data"] = {
+            "url": url,
+            "source": "crawler",
+            "provider": "katana",
+            "path": j.get("path", ""),
+            "method": j.get("method", "GET"),
         }
         return event
 

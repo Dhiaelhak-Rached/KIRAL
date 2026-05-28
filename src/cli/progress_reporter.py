@@ -24,11 +24,12 @@ STAGE_NAMES = [
     "Subdomain Enumeration",
     "DNS Resolution",
     "Port Scanning",
+    "URL Discovery",
     "HTTP Probing",
     "Vulnerability Detection",
 ]
 
-STAGE_TOOLS = ["subfinder", "dnsx", "rustscan", "httpx", "nuclei"]
+STAGE_TOOLS = ["subfinder", "dnsx", "rustscan", "gau+katana", "httpx", "nuclei"]
 
 
 @dataclass

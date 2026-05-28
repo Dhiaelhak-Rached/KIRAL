@@ -1,11 +1,12 @@
 """Main pipeline orchestrator.
 
-Coordinates the five-stage reconnaissance pipeline:
-1. Subdomain enumeration  (subfinder + amass)
-2. DNS resolution         (dnsx)
-3. Port scanning          (rustscan)  # naabu preserved but replaced
-4. HTTP probing           (httpx)
-5. Vulnerability detection (nuclei)
+Coordinates the six-stage reconnaissance pipeline:
+1. Subdomain enumeration   (subfinder + amass)
+2. DNS resolution          (dnsx)
+3. Port scanning           (rustscan)  # naabu preserved but replaced
+4. URL Discovery           (gau + katana)
+5. HTTP probing            (httpx)
+6. Vulnerability detection (nuclei)
 
 Normalized events are deduplicated and published to Redis Streams.
 """
@@ -157,8 +158,13 @@ class PipelineOrchestrator:
             if url:
                 self.services.add(url)
 
+        elif event_type == "URL_DISCOVERED":
+            url = data.get("url", "")
+            if url:
+                self.urls.append(url)
+
     async def run(self):
-        """Execute the four-stage pipeline."""
+        """Execute the six-stage pipeline."""
         logger.info(f"Scan {self.scan_id} starting for target={self.target}")
         start_time = datetime.now(timezone.utc)
 
@@ -166,7 +172,7 @@ class PipelineOrchestrator:
             # ------------------------------------------------------------------
             # Stage 1: Subdomain enumeration (concurrent)
             # ------------------------------------------------------------------
-            logger.info("Stage 1/4: Subdomain enumeration")
+            logger.info("Stage 1/6: Subdomain enumeration")
             stage1_tools = {
                 "subfinder": self.scanner.subfinder(self.target),
             }
@@ -195,7 +201,7 @@ class PipelineOrchestrator:
             # ------------------------------------------------------------------
             if self.subdomains:
                 logger.info(
-                    f"Stage 2/4: DNS resolution for {len(self.subdomains)} subdomains"
+                    f"Stage 2/6: DNS resolution for {len(self.subdomains)} subdomains"
                 )
                 dns_count = await self._process_findings(
                     self.scanner.dnsx(list(self.subdomains), self.target)
@@ -210,28 +216,47 @@ class PipelineOrchestrator:
             # ------------------------------------------------------------------
             # Stage 3: Port scanning
             # ------------------------------------------------------------------
-            # NOTE: naabu call is preserved below but commented out.
-            # RustScan is the active scanner for full 1-65535 coverage.
-            # ------------------------------------------------------------------
             if self.ips:
                 logger.info(
-                    f"Stage 3/4: Port scanning for {len(self.ips)} IPs"
+                    f"Stage 3/6: Port scanning for {len(self.ips)} IPs"
                 )
                 port_count = await self._process_findings(
                     self.scanner.rustscan(list(self.ips), self.target)
                 )
-                # port_count = await self._process_findings(
-                #     self.scanner.naabu(list(self.ips), self.target)
-                # )
                 logger.info(f"Stage 3 complete: ports_found={port_count}")
 
             if self.shutdown_event.is_set():
                 return
 
             # ------------------------------------------------------------------
-            # Stage 4: HTTP probing
+            # Stage 4: URL Discovery (gau + katana)
             # ------------------------------------------------------------------
-            # Also probe subdomains directly on common web ports
+            if self.subdomains:
+                logger.info(
+                    f"Stage 4/6: URL Discovery for {len(self.subdomains)} subdomains"
+                )
+                url_tools = {
+                    "gau": self.scanner.gau(self.target),
+                    "katana": self.scanner.katana(list(self.subdomains), self.target),
+                }
+                tasks = {
+                    name: asyncio.create_task(self._process_findings(it))
+                    for name, it in url_tools.items()
+                }
+                results = await asyncio.gather(*tasks.values(), return_exceptions=True)
+                for (name, _), res in zip(tasks.items(), results):
+                    if isinstance(res, Exception):
+                        logger.error(f"[{name}] failed: {res}")
+                logger.info(
+                    f"Stage 4 complete: urls_discovered={len(self.urls)}"
+                )
+
+            if self.shutdown_event.is_set():
+                return
+
+            # ------------------------------------------------------------------
+            # Stage 5: HTTP probing
+            # ------------------------------------------------------------------
             for sub in self.subdomains:
                 self.urls.extend(
                     [
@@ -242,7 +267,6 @@ class PipelineOrchestrator:
                     ]
                 )
 
-            # Deduplicate while preserving order
             seen = set()
             deduped_urls = []
             for url in self.urls:
@@ -253,9 +277,8 @@ class PipelineOrchestrator:
 
             if self.urls:
                 logger.info(
-                    f"Stage 4/4: HTTP probing for {len(self.urls)} URLs"
+                    f"Stage 5/6: HTTP probing for {len(self.urls)} URLs"
                 )
-                # Chunk to avoid massive temp files in a single httpx run
                 chunk_size = 5_000
                 total_http = 0
                 for i in range(0, len(self.urls), chunk_size):
@@ -270,28 +293,28 @@ class PipelineOrchestrator:
                         f"httpx chunk {i // chunk_size + 1}: {chunk_count} events"
                     )
                 logger.info(
-                    f"Stage 4 complete: services_detected={total_http}"
+                    f"Stage 5 complete: services_detected={total_http}"
                 )
 
             if self.shutdown_event.is_set():
                 return
 
             # ------------------------------------------------------------------
-            # Stage 5: Vulnerability detection (nuclei)
+            # Stage 6: Vulnerability detection (nuclei)
             # ------------------------------------------------------------------
             service_urls = sorted({u for u in self.services if u})
             if service_urls:
                 logger.info(
-                    f"Stage 5/5: Vulnerability detection for {len(service_urls)} URLs"
+                    f"Stage 6/6: Vulnerability detection for {len(service_urls)} URLs"
                 )
                 vuln_count = await self._process_findings(
                     self.scanner.nuclei(service_urls, self.target)
                 )
                 logger.info(
-                    f"Stage 5 complete: vulnerabilities_found={vuln_count}"
+                    f"Stage 6 complete: vulnerabilities_found={vuln_count}"
                 )
             else:
-                logger.info("Stage 5/5: Skipped (no services to scan)")
+                logger.info("Stage 6/6: Skipped (no services to scan)")
 
             elapsed = (datetime.now(timezone.utc) - start_time).total_seconds()
             logger.info(

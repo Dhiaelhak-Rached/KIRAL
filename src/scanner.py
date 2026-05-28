@@ -311,6 +311,57 @@ class Scanner:
                 pass
 
     # ------------------------------------------------------------------ #
+    # Stage 4: URL Discovery
+    # ------------------------------------------------------------------ #
+    async def gau(self, target: str) -> AsyncIterator[RawFinding]:
+        """Run GetAllUrls to discover historical URLs from Wayback, CommonCrawl, OTX.
+
+        Uses --subs to fetch URLs for the target domain and all subdomains.
+        Output is one URL per line (plain text).
+        """
+        cmd = [
+            "gau",
+            "--subs",
+            "--o", "-",
+            target,
+        ]
+        async for finding in self.runner.run(cmd, target, timeout_sec=180):
+            if finding.raw_line:
+                yield finding
+
+    async def katana(self, urls: list[str], target: str) -> AsyncIterator[RawFinding]:
+        """Run Katana headless crawler to discover JS endpoints and API paths.
+
+        Takes a list of seed URLs (subdomains) and crawls them.
+        Output is JSON Lines (-json) with discovered endpoints.
+        """
+        if not urls:
+            return
+
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".txt", delete=False
+        ) as f:
+            f.write("\n".join(urls))
+            input_file = f.name
+
+        try:
+            cmd = [
+                "katana",
+                "-list", input_file,
+                "-silent",
+                "-json",
+                "-o", "-",
+            ]
+            async for finding in self.runner.run(cmd, target, timeout_sec=300):
+                if finding.raw_line:
+                    yield finding
+        finally:
+            try:
+                os.unlink(input_file)
+            except OSError:
+                pass
+
+    # ------------------------------------------------------------------ #
     # Stage 5: Vulnerability detection
     # ------------------------------------------------------------------ #
     async def nuclei(self, urls: list[str], target: str) -> AsyncIterator[RawFinding]:

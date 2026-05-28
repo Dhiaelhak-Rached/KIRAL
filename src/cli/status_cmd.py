@@ -114,7 +114,7 @@ def status_cmd() -> None:
     table.add_row("Redis", make_status_badge(redis_status), redis_detail)
     table.add_row("ClickHouse", make_status_badge(ch_status), ch_detail)
 
-    for tool in ("subfinder", "dnsx", "rustscan", "httpx", "nuclei"):
+    for tool in ("subfinder", "dnsx", "rustscan", "gau", "katana", "httpx", "nuclei"):
         tstatus, tdetail = _check_tool(tool)
         table.add_row(tool, make_status_badge(tstatus), tdetail)
 
