@@ -43,11 +43,27 @@ class ClickHouseClient:
                 f"ClickHouse HTTP {resp.status_code}: {body}"
             )
 
-    async def execute(self, query: str, database: str | None = None) -> str:
-        """Execute an arbitrary SQL query."""
+    async def execute(
+        self,
+        query: str,
+        database: str | None = None,
+        query_params: dict | None = None,
+    ) -> str:
+        """Execute an arbitrary SQL query.
+
+        Args:
+            query: SQL statement. Use ClickHouse parameter syntax
+                   ``{name:Type}`` for values that come from user input.
+            database: Database to run the query in (passed as HTTP ``database`` param).
+            query_params: Dict of user-supplied values. Each key is prefixed
+                          with ``param_`` and sent as an HTTP query parameter.
+        """
         params = {}
         if database:
             params["database"] = database
+        if query_params:
+            for key, value in query_params.items():
+                params[f"param_{key}"] = str(value)
         resp = await self._client.post(
             self.url,
             params=params,

@@ -44,13 +44,17 @@ async def export_domain(domain: str, output_path: str | None = None) -> None:
             producer_host,
             producer_version
         FROM {settings.ch_database}.events
-        WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        WHERE target = {{domain:String}}
         ORDER BY scan_timestamp DESC, event_type, asset
         FORMAT JSONEachRow
         """
 
         print(f"Querying ClickHouse for domain: {domain} ...")
-        result_text = await client.execute(query, database=settings.ch_database)
+        result_text = await client.execute(
+            query,
+            database=settings.ch_database,
+            query_params={"domain": domain},
+        )
 
         lines = [ln for ln in result_text.strip().splitlines() if ln.strip()]
         if not lines:

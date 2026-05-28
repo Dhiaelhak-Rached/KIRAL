@@ -24,10 +24,14 @@ async def _count_domain_rows(domain: str) -> int:
         query = f"""
         SELECT count()
         FROM {settings.ch_database}.events
-        WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        WHERE target = {{domain:String}}
         FORMAT JSONEachRow
         """
-        result = await client.execute(query, database=settings.ch_database)
+        result = await client.execute(
+            query,
+            database=settings.ch_database,
+            query_params={"domain": domain},
+        )
         for line in result.strip().splitlines():
             if line.strip():
                 import json
@@ -46,9 +50,13 @@ async def _purge_clickhouse(domain: str, username: str, password: Optional[str])
     try:
         query = f"""
         ALTER TABLE {settings.ch_database}.events
-        DELETE WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        DELETE WHERE target = {{domain:String}}
         """
-        await client.execute(query, database=settings.ch_database)
+        await client.execute(
+            query,
+            database=settings.ch_database,
+            query_params={"domain": domain},
+        )
     finally:
         await client.close()
 
@@ -171,7 +179,7 @@ def purge_cmd(
                 Text(f"kiral scan {target}\n", style=PALETTE["primary"]),
                 Text("2. Monitor deletion progress in ClickHouse:\n", style=PALETTE["muted"]),
                 Text(
-                    f"   SELECT count() FROM {settings.ch_database}.events WHERE target = '{target}'\n",
+                    f"   SELECT count() FROM {settings.ch_database}.events WHERE target = {{{{target:String}}}}\n",
                     style=PALETTE["primary"],
                 ),
             ),

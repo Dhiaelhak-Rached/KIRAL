@@ -70,11 +70,15 @@ async def _check_clickhouse_for_domain(domain: str) -> dict:
             event_type,
             count()
         FROM {settings.ch_database}.events
-        WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        WHERE target = {{domain:String}}
         GROUP BY event_type
         FORMAT JSONEachRow
         """
-        result = await client.execute(query, database=settings.ch_database)
+        result = await client.execute(
+            query,
+            database=settings.ch_database,
+            query_params={"domain": domain},
+        )
         counts = {}
         for line in result.strip().splitlines():
             if line.strip():
@@ -84,11 +88,15 @@ async def _check_clickhouse_for_domain(domain: str) -> dict:
         vuln_query = f"""
         SELECT count()
         FROM {settings.ch_database}.events
-        WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        WHERE target = {{domain:String}}
           AND event_type = 'VULNERABILITY_FOUND'
         FORMAT JSONEachRow
         """
-        vuln_result = await client.execute(vuln_query, database=settings.ch_database)
+        vuln_result = await client.execute(
+            vuln_query,
+            database=settings.ch_database,
+            query_params={"domain": domain},
+        )
         vuln_count = 0
         for line in vuln_result.strip().splitlines():
             if line.strip():

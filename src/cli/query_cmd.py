@@ -24,10 +24,14 @@ async def _query_clickhouse(
 ) -> list[dict]:
     client = ClickHouseClient()
     try:
+        if not isinstance(limit, int) or limit < 1 or limit > 10_000:
+            raise ValueError("limit must be an integer between 1 and 10,000")
+
         type_filter = ""
+        query_params: dict[str, str] = {"domain": domain, "limit": str(limit)}
         if event_type:
-            safe_et = event_type.replace("'", "''")
-            type_filter = f"AND event_type = '{safe_et}'"
+            type_filter = "AND event_type = {event_type:String}"
+            query_params["event_type"] = event_type
 
         query = f"""
         SELECT
@@ -37,13 +41,15 @@ async def _query_clickhouse(
             scan_timestamp,
             data
         FROM {settings.ch_database}.events
-        WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        WHERE target = {{domain:String}}
         {type_filter}
         ORDER BY scan_timestamp DESC
-        LIMIT {limit}
+        LIMIT {{limit:UInt32}}
         FORMAT JSONEachRow
         """
-        result = await client.execute(query, database=settings.ch_database)
+        result = await client.execute(
+            query, database=settings.ch_database, query_params=query_params
+        )
         rows = []
         for line in result.strip().splitlines():
             line = line.strip()

@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(ConvertTo-SecureString *)",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://192.168.1.21:8123/ping\" -UseBasicParsing -TimeoutSec 5; \"PING: $\\($r.StatusCode\\) $\\($r.Content\\)\" } catch { \"PING FAIL: $\\($_.Exception.Message\\)\" })",
+      "PowerShell($pair = \"asm_ingestor:changeme\"; $b64 = [Convert]::ToBase64String\\([Text.Encoding]::ASCII.GetBytes\\($pair\\)\\); $h = @{ Authorization = \"Basic $b64\" }; try { $r = Invoke-WebRequest -Uri \"http://192.168.1.21:8123/\" -Method Post -Body \"CREATE DATABASE IF NOT EXISTS asm_pipeline\" -Headers $h -UseBasicParsing -ErrorAction Stop; \"OK: $\\($r.StatusCode\\) $\\($r.Content\\)\" } catch { \"STATUS: $\\($_.Exception.Response.StatusCode.value__\\)\"; $s = $_.Exception.Response.GetResponseStream\\(\\); \\(New-Object System.IO.StreamReader\\($s\\)\\).ReadToEnd\\(\\) })",
+      "PowerShell($pair = \"dhia:dhia\"; $b64 = [Convert]::ToBase64String\\([Text.Encoding]::ASCII.GetBytes\\($pair\\)\\); $h = @{ Authorization = \"Basic $b64\" }; try { $r = Invoke-WebRequest -Uri \"http://192.168.1.21:8123/\" -Method Post -Body \"SELECT currentUser\\(\\), version\\(\\)\" -Headers $h -UseBasicParsing -ErrorAction Stop; \"OK: $\\($r.Content\\)\" } catch { \"STATUS: $\\($_.Exception.Response.StatusCode.value__\\)\"; $s = $_.Exception.Response.GetResponseStream\\(\\); \\(New-Object System.IO.StreamReader\\($s\\)\\).ReadToEnd\\(\\) })",
+      "PowerShell(@\\(@{u='default';p=''}, @{u='default';p='dhia'}, @{u='default';p='changeme'}, @{u='admin';p='admin'}, @{u='dhia';p='changeme'}\\) | ForEach-Object { $u=$_.u; $p=$_.p; $pair=\"${u}:${p}\"; $b64=[Convert]::ToBase64String\\([Text.Encoding]::ASCII.GetBytes\\($pair\\)\\); try { $r = Invoke-WebRequest -Uri \"http://192.168.1.21:8123/\" -Method Post -Body \"SELECT currentUser\\(\\)\" -Headers @{Authorization=\"Basic $b64\"} -UseBasicParsing -ErrorAction Stop; \"OK $u`:$p -> $\\($r.Content\\)\" } catch { \"FAIL $u`:$p -> $\\($_.Exception.Response.StatusCode.value__\\)\" } })",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell($pair=\"asm_ingestor:changeme\"; $b64=[Convert]::ToBase64String\\([Text.Encoding]::ASCII.GetBytes\\($pair\\)\\); $h=@{Authorization=\"Basic $b64\"}; $url=\"http://192.168.1.21:8123/?database=asm_pipeline&query=INSERT%20INTO%20events%20FORMAT%20JSONEachRow\"; $row='{\"event_id\":\"00000000-0000-0000-0000-000000000001\",\"event_type\":\"test\",\"target\":\"t\",\"asset\":\"a\",\"source_tool\":\"unit\",\"scan_id\":\"00000000-0000-0000-0000-000000000002\",\"scan_timestamp\":\"2026-05-21 04:21:01.438\",\"data\":\"{}\",\"producer_host\":\"laptop-001\",\"producer_version\":\"0.1\"}'; try { $r=Invoke-WebRequest -Uri $url -Method Post -Body $row -Headers $h -UseBasicParsing -ErrorAction Stop; \"INSERT OK: $\\($r.StatusCode\\)\" } catch { \"STATUS: $\\($_.Exception.Response.StatusCode.value__\\)\"; $s=$_.Exception.Response.GetResponseStream\\(\\); \\(New-Object System.IO.StreamReader\\($s\\)\\).ReadToEnd\\(\\) })",
+      "Bash(ssh -o BatchMode=yes -o ConnectTimeout=3 dhia@192.168.1.21 \"true\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(./venv/Scripts/python.exe *)"
+    ]
+  }
+}

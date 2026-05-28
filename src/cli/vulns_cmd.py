@@ -43,18 +43,25 @@ async def _fetch_vulns(domain: str, severity_filter: Optional[str], limit: int) 
     """Query ClickHouse for VULNERABILITY_FOUND events and parse data JSON in Python."""
     client = ClickHouseClient()
     try:
+        if not isinstance(limit, int) or limit < 1 or limit > 10_000:
+            raise ValueError("limit must be an integer between 1 and 10,000")
+
         query = f"""
         SELECT
             asset,
             data
         FROM {settings.ch_database}.events
-        WHERE target = '{domain.replace(chr(39), chr(39)+chr(39))}'
+        WHERE target = {{domain:String}}
           AND event_type = 'VULNERABILITY_FOUND'
         ORDER BY scan_timestamp DESC
-        LIMIT {limit}
+        LIMIT {{limit:UInt32}}
         FORMAT JSONEachRow
         """
-        result = await client.execute(query, database=settings.ch_database)
+        result = await client.execute(
+            query,
+            database=settings.ch_database,
+            query_params={"domain": domain, "limit": str(limit)},
+        )
         rows = []
         for line in result.strip().splitlines():
             line = line.strip()
